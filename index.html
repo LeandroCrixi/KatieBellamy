@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Katie Bellamy LLC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="header-content">
-            <div class="logo"><img src="./images/logo.png" alt=""></div>
+            <div class="logo"><img src="./public/assets/logo.png" alt=""></div>
             <nav>
                 <ul class="navBar">
                     <li><a href="/">Disability Justice</a></li>
@@ -26,53 +26,44 @@
                 </ul>
             </nav>
         </div>
-        <h1>Resources</h1>
+        <h1 id="title">Resources</h1>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section class="intro">
-            <h2>Welcome to Our Resources</h2>
-            <p>Explore a variety of materials to support your journey towards holistic well-being.</p>
+        <section class="welcome">
+            <div class="intro">
+                <h2 id="intro-title">Welcome to Our Resources</h2>
+                <p id="intro-text">Explore a variety of materials to support your journey towards holistic well-being.</p>
+            </div>
+
+            <p id="resource-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur nam culpa sed doloremque aliquid dolor 
+                porro quos laudantium, at accusantium. Nesciunt quas earum eligendi veniam itaque in quae quisquam nihil.</p>
+
+            <a id="submit-resource" href="/">Submit New Resource</a>
         </section>
 
         <section class="resources">
-            <div class="resource-item">
-                <img src="reiki-guide.jpg" alt="Reiki Guide">
-                <h3>Reiki Guide</h3>
-                <p>A comprehensive guide to understanding and practicing Reiki.</p>
-                <a href="#">Download</a>
-            </div>
-            <div class="resource-item">
-                <img src="meditation-audio.jpg" alt="Meditation Audio">
-                <h3>Meditation Audio</h3>
-                <p>Guided meditation sessions to help you find peace and clarity.</p>
-                <a href="#">Listen</a>
-            </div>
-            <div class="resource-item">
-                <img src="journal-prompts.jpg" alt="Journal Prompts">
-                <h3>Journal Prompts</h3>
-                <p>Thought-provoking prompts to guide your self-reflection.</p>
-                <a href="#">Get Prompts</a>
-            </div>
+            
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="social-media">
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
+            <div>
+                <h3>Katie Bellamy LLC</h3>
+                <div class="social-media">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
             </div>
-            <p>&copy; <span id="year"></span> Katie Bellamy LLC. All rights reserved.</p>
+            <div>test</div>
         </div>
+        <p>&copy; <span id="current-year"></span>, Katie Bellamy LLC, All rights reserved</p>
     </footer>
 
-    <script>
-        // Update the year dynamically
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script type="module" src="./src/js/main.js" defer></script>
 </body>
 </html>

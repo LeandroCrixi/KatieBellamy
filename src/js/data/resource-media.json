@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "resource-topic": "Disability Justice",
+        "resource": "Disability Visibility",
+        "url": "https://www.penguinrandomhouse.com/books/617802/disability-visibility-by-alice-wong/",
+        "media_type": "book"
+    },
+    {
+        "id": "2",
+        "resource-topic": "Disability Justice",
+        "resource": "Demystifying Disability",
+        "url": "https://www.penguinrandomhouse.com/books/646508/demystifying-disability-by-emily-ladau/",
+        "media_type": "book"
+    },
+    {
+        "id": "3",
+        "resource-topic": "Disability Justice",
+        "resource": "The Future Is Disabled",
+        "url": "https://arsenalpulp.com/Books/T/The-Future-Is-Disabled",
+        "media_type": "book"
+    }
+]
