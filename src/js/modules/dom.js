@@ -1,17 +1,20 @@
-import { fetchData } from "./api.js";
-
+import { fetchResourcesTopic } from "./api.js";
+import { navBar } from "../../components/indexPage.js";
 
 /* Update the year dynamically */
 const currentYear = ()=>{
     return document.getElementById('current-year').textContent = new Date().getFullYear();
 }
 
+
+
 async function loadData() {
-    const data = await fetchData('./src/js/data/resources-topic.json'); // Ensure correct path
+    const myData = await fetchResourcesTopic()
+
     const resourceItem = document.querySelector('.resources')
 
-    if (data) {
-        data.map(resource => {
+    if (myData) {
+        myData.map(resource => {
             const resourceDiv = document.createElement('div')
             resourceDiv.className = "resource-item"
 
@@ -28,9 +31,11 @@ async function loadData() {
             resourceDiv.appendChild(aLearn)
 
             resourceItem.appendChild(resourceDiv)
+
+            navBar(resource.title)
             
         })
-        console.log("✅ JSON Data Loaded:", data);
+        console.log("✅ JSON Data Loaded:", myData);
     } else {
         console.error("❌ Failed to load JSON data.");
     }

@@ -1,0 +1,17 @@
+{
+  "name": "js-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-css": "npx cleancss -o ./src/css/style.min.css ./src/css/style.css",
+    "watch-css": "npx nodemon --delay 20000ms -e css -x \"npm run minify-css\"",
+    "minify-js": "npx terser ./src/js/script.js -o ./src/js/script.min.js --compress --mangle",
+    "watch-js": "npx nodemon --delay 20 -e js -x \"npm run minify-js\"",
+    "watch": "npx concurrently \"npm run watch-css\" \"npm run watch-js\"" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
