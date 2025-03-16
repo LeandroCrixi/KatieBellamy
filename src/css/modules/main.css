@@ -93,6 +93,7 @@ main {
     padding: 12.2886px 20.522px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .resource-item a:hover {

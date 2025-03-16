@@ -32,6 +32,7 @@ const fetchResourceMedia = async () => {
 
         // console.log(resourceMediaData);
         // console.log(resourcesTopicData);
+        return data
     } catch (error) {
         console.error('Error fetching data:', error.message);
     }
