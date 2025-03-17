@@ -14,15 +14,19 @@ const footer = () => {
     div.appendChild(h3)
 
     const socialMedia = document.createElement('div')
+    socialMedia.className = 'social-media'
     const email = document.createElement('a')
     email.setAttribute('href', 'mailto:katie@katie-bellamy.com')
     email.setAttribute('target', '_blank')
+    email.textContent = 'Email '
     const facebook = document.createElement('a')
     facebook.setAttribute('href', 'https://www.facebook.com/katiebellamytherapy')
     facebook.setAttribute('target', '_blank')
+    facebook.textContent = 'Facebook '
     const instagram = document.createElement('a')
     instagram.setAttribute('href', 'https://www.instagram.com/katiebellamytherapy/#')
     instagram.setAttribute('target', '_blank')
+    instagram.textContent = 'Instagram '
     socialMedia.appendChild(email)
     socialMedia.appendChild(facebook)
     socialMedia.appendChild(instagram)

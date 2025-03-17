@@ -38,7 +38,10 @@ const navBar = async () => {
 
         const h1Nav = document.createElement('h1')
         h1Nav.id = 'title'
-        h1Nav.textContent = formattedTitle()
+        const spanH1 = document.createElement('span')
+        spanH1.className = 'highlight'
+        h1Nav.appendChild(spanH1)
+        spanH1.textContent = formattedTitle()
 
         nav.appendChild(divLogo)
         nav.appendChild(navBar)

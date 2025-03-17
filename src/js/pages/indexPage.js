@@ -9,12 +9,13 @@ const addCircles = async () => {
             const resourceDiv = document.createElement('div')
             resourceDiv.className = "resource-item"
 
-            const pCircle = document.createElement('p');
+            const pCircle = document.createElement('p')
             pCircle.id = "circle"
 
-            const h3Title = document.createElement('h3');
+            const h3Title = document.createElement('h3')
             h3Title.innerHTML = resource.title
-            const aLearn = document.createElement('a');
+            const aLearn = document.createElement('a')
+            aLearn.className = 'button'
             aLearn.setAttribute('href', resource.learnMore)
             aLearn.innerHTML = 'Learn More'
 
@@ -24,9 +25,9 @@ const addCircles = async () => {
 
             resourceItem.appendChild(resourceDiv)
         })
-        console.log("✅ JSON Data Loaded:", myData);
+        // console.log("✅ JSON Data Loaded:", myData)
     } else {
-        console.error("❌ Failed to load JSON data.");
+        console.error("❌ Failed to load JSON data.")
     }
 }
 

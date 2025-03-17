@@ -10,7 +10,7 @@ footer {
 .footer-content {
     display: grid;
     grid-template-columns: 400px 1fr;
-    margin: 0 auto;
+    margin: 15px auto 30px auto;
 }
 
 .footer-content h3{
@@ -22,9 +22,9 @@ footer {
 
 .social-media {
     display: flex;
-    justify-content: center;
+    /* justify-content: flex-start; */
     gap: 15px;
-    margin-bottom: 15px;
+    margin: 0 0 15px 15px;
 }
 
 .social-media a {
@@ -45,4 +45,5 @@ footer p {
     font-size: 23.5568px;
     line-height: 30.6238px;
     text-align: center;
+
 }
