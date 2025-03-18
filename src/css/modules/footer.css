@@ -13,7 +13,7 @@ footer {
     margin: 15px auto 30px auto;
 }
 
-.footer-content h3{
+.footer-content h3 {
     color: #fff;
     font-family: 'adonis-web';
     font-size: 44.8664px;
@@ -22,7 +22,6 @@ footer {
 
 .social-media {
     display: flex;
-    /* justify-content: flex-start; */
     gap: 15px;
     margin: 0 0 15px 15px;
 }
@@ -45,5 +44,18 @@ footer p {
     font-size: 23.5568px;
     line-height: 30.6238px;
     text-align: center;
+}
 
+@media screen and (max-width: 390px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content h3 {
+        font-size: 2rem;
+    }
+
+    .social-media{
+        justify-content: center;
+    }
 }
