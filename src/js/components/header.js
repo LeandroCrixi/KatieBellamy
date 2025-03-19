@@ -1,6 +1,6 @@
 import { fetchResourcesTopic } from "../modules/api.js"
 import { formattedTitle } from "../modules/utils.js"
-import { toggleMenu } from "./event.js"
+import { toggleMenu } from "../modules/events.js"
 
 const header = async () => {
     try {
@@ -48,11 +48,11 @@ const nav = async () => {
         divBurger.className = 'burger'
         divBurger.addEventListener('click', toggleMenu)
         const bar1 = document.createElement('div')
-        bar1.classList.add ('bar', 'bar1')
+        bar1.classList.add('bar', 'bar1')
         const bar2 = document.createElement('div')
-        bar2.classList.add ('bar', 'bar2')
+        bar2.classList.add('bar', 'bar2')
         const bar3 = document.createElement('div')
-        bar3.classList.add ('bar', 'bar3')
+        bar3.classList.add('bar', 'bar3')
         divBurger.appendChild(bar1)
         divBurger.appendChild(bar2)
         divBurger.appendChild(bar3)
@@ -63,20 +63,59 @@ const nav = async () => {
         navBar.appendChild(divBurger)
         navBar.appendChild(ulNavBar)
 
+        // myData.map(resource => {
+        //     const li = document.createElement('li')
+        //     const a = document.createElement('a')
+        //     a.setAttribute('href', resource.learnMore)
+        //     a.textContent = resource.title
+
+        //     // Highlight active link
+        //     if (window.location.pathname === resource.learnMore) {
+        //         a.className = 'active'; // Add the 'active' class
+        //     }
+
+        //     li.appendChild(a)
+        //     ulNavBar.appendChild(li)
+        // })
+
+        const liAbout = document.createElement('li')
+        const liTopic = document.createElement('li')
+        liTopic.className = 'dropdown'
+        const liSubmit = document.createElement('li')
+        const liContact = document.createElement('li')
+        const aAbout = document.createElement('a')
+        aAbout.textContent = 'About Us'
+        const aTopic = document.createElement('a')
+        aTopic.textContent = 'Topics'
+        aTopic.className = 'dropdown-btn'
+        const ulDropdown = document.createElement('ul')
+        // ulDropdown.className = 'dropdown-content'
+        ulDropdown.classList.add('dropdown-content', 'show')
+
         myData.map(resource => {
             const li = document.createElement('li')
             const a = document.createElement('a')
             a.setAttribute('href', resource.learnMore)
             a.textContent = resource.title
 
-            // Highlight active link
-            if (window.location.pathname === resource.learnMore) {
-                a.className = 'active'; // Add the 'active' class
-            }
-
             li.appendChild(a)
-            ulNavBar.appendChild(li)
+            ulDropdown.appendChild(li)
         })
+
+        const aSubmit = document.createElement('a')
+        aSubmit.textContent = 'Submit'
+        const aContact = document.createElement('a')
+        aContact.textContent = 'Contact Us'
+        liAbout.appendChild(aAbout)
+        liTopic.appendChild(aTopic)
+        liTopic.appendChild(ulDropdown)
+        liSubmit.appendChild(aSubmit)
+        liContact.appendChild(aContact)
+
+        ulNavBar.appendChild(liAbout)
+        ulNavBar.appendChild(liTopic)
+        ulNavBar.appendChild(liSubmit)
+        ulNavBar.appendChild(liContact)
         return navBar
     } catch (error) {
         console.error("Error in NavBar component:", error.message)

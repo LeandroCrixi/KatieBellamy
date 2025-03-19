@@ -22,8 +22,9 @@ header {
     padding: 0;
     margin-top: 40px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    padding-right: 16em;
+    position: relative;
 }
 
 .navBar li {
@@ -33,12 +34,35 @@ header {
 .navBar a {
     color: rgb(63, 74, 73);
     text-decoration: none;
-    font-size: 1.375rem;
+    font-size: 1.6rem;
     font-weight: 400;
     padding: 5px 10px;
     transition: border-bottom 0.5s ease-in-out;
     border-bottom: 1px solid transparent;
     cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    list-style: none;
+    padding: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+/* Hover effect on dropdown links */
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown when the parent is active */
+.show {
+    display: block;
 }
 
 .navBar a:hover {
