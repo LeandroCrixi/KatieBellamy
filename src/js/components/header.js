@@ -1,6 +1,6 @@
 import { fetchResourcesTopic } from "../modules/api.js"
 import { formattedTitle } from "../modules/utils.js"
-import { toggleMenu } from "../modules/events.js"
+import { toggleMenu, addShowClass, removeShowClass } from "../modules/events.js"
 
 const header = async () => {
     try {
@@ -63,21 +63,6 @@ const nav = async () => {
         navBar.appendChild(divBurger)
         navBar.appendChild(ulNavBar)
 
-        // myData.map(resource => {
-        //     const li = document.createElement('li')
-        //     const a = document.createElement('a')
-        //     a.setAttribute('href', resource.learnMore)
-        //     a.textContent = resource.title
-
-        //     // Highlight active link
-        //     if (window.location.pathname === resource.learnMore) {
-        //         a.className = 'active'; // Add the 'active' class
-        //     }
-
-        //     li.appendChild(a)
-        //     ulNavBar.appendChild(li)
-        // })
-
         const liAbout = document.createElement('li')
         const liTopic = document.createElement('li')
         liTopic.className = 'dropdown'
@@ -88,9 +73,15 @@ const nav = async () => {
         const aTopic = document.createElement('a')
         aTopic.textContent = 'Topics'
         aTopic.className = 'dropdown-btn'
+        // aTopic.addEventListener('mouseover', addShowClass)
+        // aTopic.addEventListener('mouseout', removeShowClass)
         const ulDropdown = document.createElement('ul')
-        // ulDropdown.className = 'dropdown-content'
-        ulDropdown.classList.add('dropdown-content', 'show')
+        ulDropdown.classList.add('dropdown-content')
+        aTopic.addEventListener('mouseover', addShowClass);
+        ulDropdown.addEventListener('mouseover', addShowClass); // Keep menu open when inside
+
+        aTopic.addEventListener('mouseout', removeShowClass);
+        ulDropdown.addEventListener('mouseout', removeShowClass);
 
         myData.map(resource => {
             const li = document.createElement('li')

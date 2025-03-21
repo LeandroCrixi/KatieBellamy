@@ -2,7 +2,7 @@
 const path = document.location.pathname; // Get "/src/pages/disability_justice.html"
 
 const formattedTitle = () => {
-    if (!path.includes("/src/pages/")) {
+    if (!path.includes("/src/pages/topics/")) {
         return "Resources";
     }
 
