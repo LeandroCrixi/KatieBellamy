@@ -9,8 +9,12 @@ const addResource = async () => {
             const divResource = document.createElement('a')
             divResource.className = 'topic-resource'
             divResource.setAttribute('href', data.url)
+            divResource.setAttribute('target', '_blank')
             const icon = document.createElement('div')
+            const imgTest = document.createElement('img')
+            imgTest.setAttribute('src', data.media_type.media_icon)
             icon.className = 'icon'
+            icon.appendChild(imgTest)
             const h3Text = document.createElement('h3')
             h3Text.textContent = data.resource
             const pText = document.createElement('p')
@@ -20,6 +24,7 @@ const addResource = async () => {
             divResource.appendChild(pText)
             
             mainContent.appendChild(divResource)
+            console.log(data.media_type.media_icon)
         })
     } else {
         console.error("❌ Failed to load JSON data.")
