@@ -10,16 +10,15 @@ const addResource = async () => {
             divResource.className = 'topic-resource'
             divResource.setAttribute('href', data.url)
             divResource.setAttribute('target', '_blank')
-            const icon = document.createElement('div')
-            const imgTest = document.createElement('img')
-            imgTest.setAttribute('src', data.media_type.media_icon)
-            icon.className = 'icon'
-            icon.appendChild(imgTest)
+            const iconImg = document.createElement('img')
+            iconImg.setAttribute('src', data.media_type.media_icon)
+            iconImg.setAttribute('alt', data.media_type.alt)
+            iconImg.id = 'icon'
             const h3Text = document.createElement('h3')
             h3Text.textContent = data.resource
             const pText = document.createElement('p')
             pText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
-            divResource.appendChild(icon)
+            divResource.appendChild(iconImg)
             divResource.appendChild(h3Text)
             divResource.appendChild(pText)
             

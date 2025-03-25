@@ -11,7 +11,7 @@ const header = async () => {
         const divLogo = document.createElement('div')
         divLogo.className = 'logo'
         const aLogo = document.createElement('a')
-        aLogo.setAttribute('href', 'http://127.0.0.1:5501/')
+        aLogo.setAttribute('href', '/')
         const imgLogo = document.createElement('img')
         imgLogo.setAttribute('src', '/public/assets/logo.png')
         imgLogo.setAttribute('alt', 'Logo')

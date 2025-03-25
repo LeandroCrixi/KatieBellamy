@@ -9,7 +9,7 @@ const fetchResourceMedia = async () => {
     try {
         const { data, error } = await supabase
             .from('resource_media')
-            .select('resources_topic(id, title), media_type(id, media, media_icon), resourceTopicId, resource, url, mediaTypeId')
+            .select('resources_topic(id, title), media_type(id, media, media_icon, alt), resourceTopicId, resource, url, mediaTypeId')
             .eq('resources_topic.title', `${formattedTitle()}`)
             .not('resources_topic', 'is', null)
 
