@@ -26,6 +26,12 @@ const header = async () => {
         spanH1.textContent = formattedTitle()
         h1Nav.appendChild(spanH1)
 
+        if (spanH1.textContent.length > 20) {
+            h1Nav.style.fontSize = '3rem'
+        } else {
+            h1Nav.style.fontSize = '4rem'
+        }
+
         // Create the nav bar and append elements
         const navBar = await nav()
         headerContent.appendChild(divLogo)
@@ -73,8 +79,6 @@ const nav = async () => {
         const aTopic = document.createElement('a')
         aTopic.textContent = 'Topics'
         aTopic.className = 'dropdown-btn'
-        // aTopic.addEventListener('mouseover', addShowClass)
-        // aTopic.addEventListener('mouseout', removeShowClass)
         const ulDropdown = document.createElement('ul')
         ulDropdown.classList.add('dropdown-content')
         aTopic.addEventListener('mouseover', addShowClass);
@@ -83,15 +87,17 @@ const nav = async () => {
         aTopic.addEventListener('mouseout', removeShowClass);
         ulDropdown.addEventListener('mouseout', removeShowClass);
 
-        myData.map(resource => {
-            const li = document.createElement('li')
-            const a = document.createElement('a')
-            a.setAttribute('href', resource.learnMore)
-            a.textContent = resource.title
+        myData
+            .sort((a, b) => a.title.localeCompare(b.title))
+            .map(resource => {
+                const li = document.createElement('li')
+                const a = document.createElement('a')
+                a.setAttribute('href', resource.learnMore)
+                a.textContent = resource.title
 
-            li.appendChild(a)
-            ulDropdown.appendChild(li)
-        })
+                li.appendChild(a)
+                ulDropdown.appendChild(li)
+            })
 
         const aSubmit = document.createElement('a')
         aSubmit.textContent = 'Submit'

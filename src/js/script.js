@@ -15,16 +15,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const { addCircles } = await import('./pages/indexPage.js');
             addCircles();
             break;
-        case '/src/pages/topics/disability_justice.html':
-        case '/src/pages/topics/intersectionality.html':
+        case '/src/pages/topics/anti-fat_bias.html':
+        case '/src/pages/topics/black_educator_and_orgs_to_know.html':
         case '/src/pages/topics/climate_change.html':
         case '/src/pages/topics/couples_and_relationship.html':
-        case '/src/pages/topics/anti-fat_bias.html':
-        case '/src/pages/topics/queer_inclusion.html':
-        case '/src/pages/topics/mindfulness.html':
-        case '/src/pages/topics/mental_health.html':
-        case '/src/pages/topics/black_educator_and_orgs_to_know.html':
+        case '/src/pages/topics/disability_justice.html':
         case '/src/pages/topics/educators_and_orgs_to_know.html':
+        case '/src/pages/topics/intersectionality.html':
+        case '/src/pages/topics/mental_health.html':
+        case '/src/pages/topics/mindfulness.html':
+        case '/src/pages/topics/queer_inclusion.html':
             const { addResource } = await import('./pages/topicPages.js');
             addResource();
             break;

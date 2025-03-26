@@ -4,7 +4,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
 }
 
 .footer-content {
@@ -46,7 +45,7 @@ footer p {
     text-align: center;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
     .footer-content {
         grid-template-columns: 1fr;
     }
