@@ -8,13 +8,15 @@
   .welcome {
       background: url('../../../public/assets/Website_background.png') no-repeat center center/cover;
       height: 100%;
-      padding: 70px;
+      padding: 80px 210px;
       justify-content: center;
       text-align: center;
   }
 
   #intro-title {
-      font-size: 2rem;
+      font-family: 'Great Vibes';
+      font-size: 5rem;
+      font-weight: 350;
       margin: 0px 0px 50px 0px;
   }
 
@@ -29,9 +31,10 @@
   #resource-text {
       box-sizing: border-box;
       color: #3f4a49;
-      font-family: 'europa';
-      font-size: 23.5568px;
-      line-height: 30.6238px;
+      font-family: 'Poppins';
+      font-size: 24px;
+      line-height: 35px;
+      font-weight: 400;
       padding: 0px 0px 60px 0px;
       margin: 0px;
   }

@@ -9,7 +9,8 @@ const formattedTitle = () => {
     }else if (path === '/src/pages/contactUs.html'){
         return 'Contact Us'
     }else if (!path.includes("/src/pages/topics/")) {
-        return "Bellamy & Associates <br> Community Resources Hub";
+        // return "Bellamy & Associates <br> Community Resources Hub";
+        return "<p>Bellamy & Associates <br> <span>Community Resources Hub</span></p>";
     }
 
     const pageName = path.split("/").pop().replace(".html", ""); // Extract last part of the path

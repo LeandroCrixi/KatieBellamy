@@ -4,6 +4,8 @@ header {
     border-width: 20px 50px 20px 50px;
     border-style: solid;
     border-color: #DCD9D0;
+    font-family: 'Poppins';
+    font-weight: 500;
 }
 
 #header-content {
@@ -36,7 +38,6 @@ header {
     color: rgb(63, 74, 73);
     text-decoration: none;
     font-size: 1.4rem;
-    font-weight: 400;
     padding: 5px 10px;
     transition: border-bottom 0.5s ease-in-out;
     border-bottom: 1px solid transparent;
@@ -84,12 +85,18 @@ header {
     display: flex;
     color: rgb(63, 74, 73);
     margin: 0px 0 60px 100px;
+    font-family: 'Libre Baskerville';
+    font-weight: 400;
 }
 
 .highlight {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #f2c6b0 40%);
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 90%, #f2c6b0 10%); */
+    text-decoration: underline #f2c6b0 5px;
 }
 
+.highlight span {
+    font-size: 2.1rem;
+}
 
 @media screen and (max-width: 820px) {
     header {
