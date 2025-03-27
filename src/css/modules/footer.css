@@ -9,14 +9,13 @@ footer {
 .footer-content {
     display: grid;
     grid-template-columns: 400px 1fr;
-    margin: 15px auto 30px auto;
+    margin: 20px auto 50px auto;
 }
 
 .footer-content h3 {
     color: #fff;
-    font-family: 'adonis-web';
-    font-size: 44.8664px;
-    line-height: 50.1786px;
+    font-size: 45px;
+    line-height: 50px;
 }
 
 .social-media {
@@ -36,12 +35,41 @@ footer {
     color: #ffcc29;
 }
 
+.divLinks {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 70px;
+}
+
+.quick-links p{
+    font-weight: bold;
+    
+}
+
+.LinkDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.LinkDiv a {
+    margin-top: 5px;
+    display: inline-block;
+    color: #f0d6cc;
+    font-size: 24px;
+    line-height: 30px;
+    /* text-align: left; */
+    text-decoration: underline 1px;
+    text-underline-offset: 5px;
+    cursor: pointer;
+}
+
 footer p {
     color: #fff;
     display: inline;
-    font-family: 'europa';
-    font-size: 23.5568px;
-    line-height: 30.6238px;
+    font-size: 25px;
+    line-height: 30px;
     text-align: center;
 }
 
@@ -54,7 +82,7 @@ footer p {
         font-size: 2rem;
     }
 
-    .social-media{
+    .social-media {
         justify-content: center;
     }
 }

@@ -23,7 +23,7 @@ const addResource = async () => {
             divResource.appendChild(pText)
             
             mainContent.appendChild(divResource)
-            console.log(data.media_type.media_icon)
+            // console.log(data.media_type.media_icon)
         })
     } else {
         console.error("❌ Failed to load JSON data.")

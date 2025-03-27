@@ -5,6 +5,7 @@ import { toggleMenu, addShowClass, removeShowClass } from "../modules/events.js"
 const header = async () => {
     try {
         const header = document.querySelector('header')
+        header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
         const headerContent = document.getElementById('header-content')
 
         // Create logo
@@ -23,7 +24,7 @@ const header = async () => {
         h1Nav.id = 'title'
         const spanH1 = document.createElement('span')
         spanH1.className = 'highlight'
-        spanH1.textContent = formattedTitle()
+        spanH1.innerHTML = formattedTitle()
         h1Nav.appendChild(spanH1)
 
         if (spanH1.textContent.length > 20) {
@@ -76,6 +77,7 @@ const nav = async () => {
         const liContact = document.createElement('li')
         const aAbout = document.createElement('a')
         aAbout.textContent = 'About Us'
+        aAbout.setAttribute('href', '/src/pages/aboutUs.html')
         const aTopic = document.createElement('a')
         aTopic.textContent = 'Topics'
         aTopic.className = 'dropdown-btn'
@@ -100,9 +102,11 @@ const nav = async () => {
             })
 
         const aSubmit = document.createElement('a')
-        aSubmit.textContent = 'Submit'
+        aSubmit.textContent = 'Submit a Resource'
+        aSubmit.setAttribute('href', '/src/pages/submit.html')
         const aContact = document.createElement('a')
         aContact.textContent = 'Contact Us'
+        aContact.setAttribute('href', '/src/pages/contactUs.html')
         liAbout.appendChild(aAbout)
         liTopic.appendChild(aTopic)
         liTopic.appendChild(ulDropdown)

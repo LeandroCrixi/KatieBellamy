@@ -2,19 +2,33 @@
 const path = document.location.pathname; // Get "/src/pages/disability_justice.html"
 
 const formattedTitle = () => {
-    if (!path.includes("/src/pages/topics/")) {
-        return "Resources";
+    if(path === '/src/pages/aboutUs.html'){
+        return 'About Us'
+    }else if (path === '/src/pages/submit.html'){
+        return 'Submit'
+    }else if (path === '/src/pages/contactUs.html'){
+        return 'Contact Us'
+    }else if (!path.includes("/src/pages/topics/")) {
+        return "Bellamy & Associates <br> Community Resources Hub";
     }
 
     const pageName = path.split("/").pop().replace(".html", ""); // Extract last part of the path
-    const exceptions = ["and", "or", "the", "a", "to", "of"]; // List of words to keep in lowercase
+
+    const exceptions = ["and", "or", "the", "a", "to", "of"]; // List of words to keep lowercase
+
     const formattedTitle = pageName
         .split("_") // Split by underscores
         .map(word =>
             word
-                .split("-") // Split by hyphens
-                .map(part => part.charAt(0).toUpperCase() + part.slice(1)) // Capitalize hyphenated parts
-                .join("-") // Join hyphenated parts back with hyphen
+            .split(/(-|&)/) // Split by hyphens or ampersand, while keeping delimiters
+            .map(part => {
+                // Keep "&" as-is, capitalize other words
+                if (part === "&") {
+                    return part; // Leave "&" untouched
+                }
+                return part.charAt(0).toUpperCase() + part.slice(1); // Capitalize each part
+            })
+            .join("") // Join back hyphenated/ampersand-separated parts
         )
         .join(" ") // Join words with spaces
         .split(" ") // Split final title into words to handle exceptions
