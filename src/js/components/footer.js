@@ -93,6 +93,7 @@ const footer = async () => {
     footerContent.appendChild(divLinks)
 
     const p = document.createElement('p')
+    p.id = 'textFooter'
     const span = document.createElement('span')
     span.id = 'current-year'
     p.innerHTML = `&copy; `;

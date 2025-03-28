@@ -3,7 +3,8 @@ footer {
     background-color: #7F8563;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 30px 25px 50px 25px;
+    font-family: 'Poppins';
 }
 
 .footer-content {
@@ -14,8 +15,9 @@ footer {
 
 .footer-content h3 {
     color: #fff;
-    font-size: 45px;
+    font-size: 2.5rem;
     line-height: 50px;
+    font-family: 'Libre Baskerville';
 }
 
 .social-media {
@@ -40,11 +42,8 @@ footer {
     justify-content: center;
     text-align: left;
     gap: 70px;
-}
-
-.quick-links p{
-    font-weight: bold;
-    
+    font-weight: 450;
+    font-size: 1.25rem;
 }
 
 .LinkDiv {
@@ -57,9 +56,7 @@ footer {
     margin-top: 5px;
     display: inline-block;
     color: #f0d6cc;
-    font-size: 24px;
     line-height: 30px;
-    /* text-align: left; */
     text-decoration: underline 1px;
     text-underline-offset: 5px;
     cursor: pointer;
@@ -68,9 +65,16 @@ footer {
 footer p {
     color: #fff;
     display: inline;
-    font-size: 25px;
+    font-size: 1.5rem;
     line-height: 30px;
     text-align: center;
+}
+
+@media screen and (max-width: 820px) {
+    .footer-content h3 {
+        font-size: 2rem;
+        text-align: start;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -78,11 +82,11 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .footer-content h3 {
-        font-size: 2rem;
-    }
-
     .social-media {
         justify-content: center;
+    }
+
+    #textFooter{
+        font-size: 1rem;
     }
 }

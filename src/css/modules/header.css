@@ -155,6 +155,9 @@ header {
 }
 
 @media screen and (max-width: 420px) {
+    header{
+        padding-bottom: 50px;
+    }
     #title {
         font-size: 2rem;
     }

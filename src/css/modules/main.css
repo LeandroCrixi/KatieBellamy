@@ -73,8 +73,9 @@
   .resource-item h3 {
       display: flex;
       color: #825a4a;
-      font-size: 28.4744px;
-      line-height: 33.2125px;
+      font-size: 28px;
+      font-weight: 200;
+      line-height: 33px;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -91,13 +92,6 @@
 
   @media screen and (max-width: 820px) {
       .welcome {
-          padding: 0 20px;
-      }
-  }
-
-  @media screen and (max-width: 420px) {
-      .welcome {
-          height: 100%;
-          padding-bottom: 60px;
+          padding: 60px 30px;
       }
   }
