@@ -1,11 +1,35 @@
-import { fetchResourcesTopic } from "../modules/api.js"
+import { fetchResourcesTopic, fetchBgImg } from "../modules/api.js"
 import { formattedTitle } from "../modules/utils.js"
 import { toggleMenu, addShowClass, removeShowClass } from "../modules/events.js"
 
 const header = async () => {
+    const link = document.createElement('link'); // Create a <link> element
+    link.rel = 'shortcut icon'; // Set the rel attribute
+    link.href = '../../../public/icons/Favicon.png'; // Set the href attribute to the path of your favicon
+    link.type = 'image/x-icon'; // Set the type attribute
+
+    document.head.appendChild(link);
+
     try {
+        const myData = await fetchBgImg()
         const header = document.querySelector('header')
-        header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
+
+        let backgroundSet = false; // Track if a valid background is set
+        myData.forEach((data) => {
+            if (!backgroundSet && data && data.bg_img) {
+                header.style.background = `#DCD9D0 url(${data.bg_img}) 87% center/360px no-repeat`;
+                if (window.matchMedia("(max-width: 420px)").matches){
+                    header.style.background = 'none'
+                    header.style.backgroundColor = '#DCD9D0'
+                }
+                // header.style.backgroundImage = `url(${data.bg_img})`;
+                // header.className = 'dynamic-bg'
+                backgroundSet = true; // Mark as set
+            }
+        });
+        if (!backgroundSet) {
+            header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
+        }
         const headerContent = document.getElementById('header-content')
 
         // Create logo

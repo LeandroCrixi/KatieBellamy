@@ -26,11 +26,9 @@ footer {
     margin: 0 0 15px 15px;
 }
 
-.social-media a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+.social-media img{
+    width: 35px;
+    border-radius: 50px;
 }
 
 .social-media a:hover {

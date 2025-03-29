@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             addCircles();
             break;
         case '/src/pages/topics/anti-fat_bias.html':
-        case '/src/pages/topics/black_educators_&_orgs_to_know.html':
+        case '/src/pages/topics/black_educators_&_orgs.html':
         case '/src/pages/topics/climate_change.html':
         case '/src/pages/topics/couples_&_relationship.html':
         case '/src/pages/topics/disability_justice.html':
