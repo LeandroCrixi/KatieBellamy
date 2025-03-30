@@ -46,4 +46,11 @@ const formattedTitle = () => {
     return formatingPathName()
 };
 
-export { formattedTitle, formatingPathName }
+const settingBackground = (element) => {
+    if (window.matchMedia("(max-width: 420px)").matches) {
+        element.style.background = 'none'
+        element.style.backgroundColor = '#DCD9D0'
+    }
+}
+
+export { formattedTitle, formatingPathName, settingBackground }

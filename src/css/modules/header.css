@@ -95,7 +95,7 @@ header {
 
 @media screen and (max-width: 820px) {
     header {
-        height: 500px;
+        padding-bottom: 100px;
     }
 
     .navBar {
@@ -151,7 +151,7 @@ header {
 
 @media screen and (max-width: 420px) {
     header {
-        height: 400px;
+        padding-bottom: 50px;
     }
 
     span.highlight {

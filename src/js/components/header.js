@@ -1,5 +1,5 @@
 import { fetchResourcesTopic, fetchBgImg } from "../modules/api.js"
-import { formattedTitle } from "../modules/utils.js"
+import { formattedTitle, settingBackground } from "../modules/utils.js"
 import { toggleMenu, addShowClass, removeShowClass } from "../modules/events.js"
 
 const header = async () => {
@@ -15,20 +15,17 @@ const header = async () => {
         const header = document.querySelector('header')
 
         let backgroundSet = false; // Track if a valid background is set
+
         myData.forEach((data) => {
             if (!backgroundSet && data && data.bg_img) {
                 header.style.background = `#DCD9D0 url(${data.bg_img}) 87% center/360px no-repeat`;
-                if (window.matchMedia("(max-width: 420px)").matches){
-                    header.style.background = 'none'
-                    header.style.backgroundColor = '#DCD9D0'
-                }
-                // header.style.backgroundImage = `url(${data.bg_img})`;
-                // header.className = 'dynamic-bg'
+                settingBackground(header)
                 backgroundSet = true; // Mark as set
             }
         });
         if (!backgroundSet) {
             header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
+            settingBackground(header)
         }
         const headerContent = document.getElementById('header-content')
 
