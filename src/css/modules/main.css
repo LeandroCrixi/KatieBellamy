@@ -23,7 +23,7 @@
   #intro-text {
       color: #ac785d;
       font-family: 'adonis-web';
-      font-size: 28.4744px;
+      font-size: 35px;
       line-height: 33.2125px;
       margin: 0px 0px 50px 0px;
   }
@@ -32,9 +32,8 @@
       box-sizing: border-box;
       color: #3f4a49;
       font-family: 'Poppins';
-      font-size: 24px;
+      font-size: 20px;
       line-height: 35px;
-      font-weight: 400;
       padding: 0px 0px 60px 0px;
       margin: 0px;
   }

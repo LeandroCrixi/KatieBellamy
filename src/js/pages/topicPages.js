@@ -19,7 +19,8 @@ const addResource = async () => {
                 const h3Text = document.createElement('h3')
                 h3Text.textContent = data.resource
                 const pText = document.createElement('p')
-                pText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+                // pText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+                pText.textContent = data.textContent
                 divResource.appendChild(iconImg)
                 divResource.appendChild(h3Text)
                 divResource.appendChild(pText)
