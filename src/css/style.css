@@ -3,6 +3,6 @@
 @import './modules/global.css';
 @import './modules/components.css';
 @import './modules/header.css';
-@import './modules/main.css';
-@import './modules/topicPages.css';
+@import './pages/main.css';
+@import './pages/topicPages.css';
 @import './modules/footer.css';

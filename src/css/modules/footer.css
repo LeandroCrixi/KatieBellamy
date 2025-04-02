@@ -36,6 +36,7 @@ footer {
 }
 
 .divLinks {
+    display: -webkit-flex;
     display: flex;
     justify-content: center;
     text-align: left;
@@ -45,6 +46,7 @@ footer {
 }
 
 .LinkDiv {
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     margin-top: 10px;

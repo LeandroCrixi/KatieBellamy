@@ -32,6 +32,12 @@ const formatingPathName = () => {
     return formattedTitle;
 }
 
+const mainTitle = () => {
+    if (path === "/") {
+        return "Bellamy & Associates"
+    }
+}
+
 const formattedTitle = () => {
     if (path === '/src/pages/aboutUs.html') {
         return 'About Us'
@@ -40,7 +46,7 @@ const formattedTitle = () => {
     } else if (path === '/src/pages/contactUs.html') {
         return 'Contact Us'
     } else if (!path.includes("/src/pages/topics/")) {
-        return "<p>Bellamy & Associates <br> <span>Community Resources Hub</span></p>";
+        return "<br><br><span>Community Resources Hub</span>";
     }
 
     return formatingPathName()
@@ -53,4 +59,4 @@ const settingBackground = (element) => {
     }
 }
 
-export { formattedTitle, formatingPathName, settingBackground }
+export { mainTitle, formattedTitle, formatingPathName, settingBackground }

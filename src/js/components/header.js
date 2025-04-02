@@ -1,14 +1,10 @@
 import { fetchResourcesTopic, fetchBgImg } from "../modules/api.js"
-import { formattedTitle, settingBackground } from "../modules/utils.js"
+import { mainTitle, formattedTitle, settingBackground } from "../modules/utils.js"
 import { toggleMenu, addShowClass, removeShowClass } from "../modules/events.js"
+import { favicon } from "../modules/dom.js"
 
 const header = async () => {
-    const link = document.createElement('link'); // Create a <link> element
-    link.rel = 'shortcut icon'; // Set the rel attribute
-    link.href = '../../../public/icons/Favicon.png'; // Set the href attribute to the path of your favicon
-    link.type = 'image/x-icon'; // Set the type attribute
-
-    document.head.appendChild(link);
+    favicon()
 
     try {
         const myData = await fetchBgImg()
@@ -43,6 +39,7 @@ const header = async () => {
         // Create the title
         const h1Nav = document.createElement('h1')
         h1Nav.id = 'title'
+        h1Nav.textContent = mainTitle()
         const spanH1 = document.createElement('span')
         spanH1.className = 'highlight'
         spanH1.innerHTML = formattedTitle()
