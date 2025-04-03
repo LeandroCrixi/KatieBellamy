@@ -9,6 +9,7 @@ const header = async () => {
     try {
         const myData = await fetchBgImg()
         const header = document.querySelector('header')
+        header.className = 'europa'
 
         let backgroundSet = false; // Track if a valid background is set
 
@@ -39,6 +40,7 @@ const header = async () => {
         // Create the title
         const h1Nav = document.createElement('h1')
         h1Nav.id = 'title'
+        h1Nav.className = 'adonis-web'
         h1Nav.textContent = mainTitle()
         const spanH1 = document.createElement('span')
         spanH1.className = 'highlight'

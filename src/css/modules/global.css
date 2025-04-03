@@ -1,4 +1,8 @@
 /* General Styles */
+:root{
+    --blue: blue;
+}
+
 body {
     font-family: 'Libre Baskerville';
     margin: 0;
@@ -7,6 +11,11 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Libre Baskerville = Adonis Web */
-/* Poppins = Europa  */
-/* Great Vibes = Kristi */
+.adonis-web{
+    font-family: 'Libre Baskerville';
+}
+
+.europa{
+    font-family: 'Poppins';
+}
+

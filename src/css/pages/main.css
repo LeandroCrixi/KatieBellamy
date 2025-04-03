@@ -22,7 +22,6 @@
 
   #intro-text {
       color: #ac785d;
-      font-family: 'adonis-web';
       font-size: 35px;
       line-height: 33.2125px;
       margin: 0px 0px 50px 0px;
@@ -31,19 +30,10 @@
   #resource-text {
       box-sizing: border-box;
       color: #3f4a49;
-      font-family: 'Poppins';
       font-size: 20px;
       line-height: 35px;
       padding: 0px 0px 60px 0px;
       margin: 0px;
-  }
-
-  #submit-resource {
-      background-color: #d4967d;
-  }
-
-  #submit-resource:hover {
-      background: #deae9a;
   }
 
   /* Resources Section (circles) */
@@ -79,14 +69,6 @@
       align-items: center;
       text-align: center;
       height: 70px;
-  }
-
-  .resource-item a {
-      background-color: #A7A992;
-  }
-
-  .resource-item a:hover {
-      background-color: #cacbbd;
   }
 
   @media screen and (max-width: 820px) {

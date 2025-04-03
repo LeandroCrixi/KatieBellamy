@@ -5,6 +5,7 @@ const companyName = 'Katie Bellamy LLC'
 
 const footer = async () => {
     const footer = document.querySelector('footer')
+    footer.className = 'europa'
     const footerContent = document.createElement('div')
     footerContent.className = 'footer-content'
     footer.appendChild(footerContent)
@@ -13,6 +14,7 @@ const footer = async () => {
     footerContent.appendChild(div)
 
     const h3 = document.createElement('h3')
+    h3.className = 'adonis-web'
     h3.textContent = companyName
     div.appendChild(h3)
 

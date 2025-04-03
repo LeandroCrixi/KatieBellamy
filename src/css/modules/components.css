@@ -10,3 +10,19 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.section-button {
+    background-color: #d4967d;
+}
+
+.section-button:hover {
+    background: #deae9a;
+}
+
+.resource-button a {
+    background-color: #A7A992;
+}
+
+.resource-button a:hover {
+    background-color: #cacbbd;
+}
