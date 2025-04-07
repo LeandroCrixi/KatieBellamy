@@ -42,9 +42,10 @@
     margin: 100px 50px;
 }
 
-.who-we-are .section-button,
-.approach .section-button {
-    margin: 0 160px;
+.img-btn-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .br-page {
@@ -56,17 +57,38 @@
     .who-we-are,
     .approach {
         grid-template-columns: 1fr 1fr;
-        padding: 40px 100px;
-        gap: 40px;
+        padding: 40px 30px;
+        gap: 20px;
     }
 
     .about-us-img {
         width: 300px;
         height: 400px;
     }
+}
 
-    .who-we-are .section-button,
-    .approach .section-button {
-        margin: 0 100px;
+@media screen and (max-width: 420px) {
+
+    .who-we-are,
+    .approach {
+        grid-template-columns: 1fr;
+        padding: 40px 40px;
+    }
+
+    .who-we-are {
+        padding-bottom: 100px;
+    }
+
+    .who-we-are h2,
+    .approach h2 {
+        text-align: center;
+    }
+
+    .approach {
+        padding-top: 100px;
+    }
+
+    .about-us-img {
+        margin: 30px auto 50px auto;
     }
 }

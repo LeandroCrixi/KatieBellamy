@@ -1,12 +1,11 @@
 .button {
-    background-position: 0px 0px;
     color: #fff;
     font-family: 'Poppins';
     font-size: 17px;
     font-weight: 450;
     text-decoration: none;
     letter-spacing: 1.7px;
-    padding: 13.6px 22.712px;
+    padding: 14px 22px;
     text-transform: uppercase;
     cursor: pointer;
 }

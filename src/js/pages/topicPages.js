@@ -1,33 +1,33 @@
 import { fetchResourceMedia } from "../modules/api.js"
+import { sortByTitleIgnoringPrefixes } from "../modules/utils.js"
 
 const addResource = async () => {
     const myData = await fetchResourceMedia()
     const mainContent = document.querySelector('.main-content')
 
     if (myData) {
+        const sortedData = sortByTitleIgnoringPrefixes(myData);
         myData
-            .sort((a, b) => a.resource.localeCompare(b.resource))
-            .map(data => {
-                const divResource = document.createElement('a')
-                divResource.className = 'topic-resource'
-                divResource.setAttribute('href', data.url)
-                divResource.setAttribute('target', '_blank')
-                const iconImg = document.createElement('img')
-                iconImg.setAttribute('src', data.media_type.media_icon)
-                iconImg.setAttribute('alt', data.media_type.alt)
-                iconImg.id = 'icon'
-                const h3Text = document.createElement('h3')
-                h3Text.textContent = data.resource
-                const pText = document.createElement('p')
-                // pText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
-                pText.textContent = data.textContent
-                divResource.appendChild(iconImg)
-                divResource.appendChild(h3Text)
-                divResource.appendChild(pText)
+        // .sort((a, b) => a.resource.localeCompare(b.resource))
+        sortedData.map(data => {
+            const divResource = document.createElement('a')
+            divResource.className = 'topic-resource'
+            divResource.setAttribute('href', data.url)
+            divResource.setAttribute('target', '_blank')
+            const iconImg = document.createElement('img')
+            iconImg.setAttribute('src', data.media_type.media_icon)
+            iconImg.setAttribute('alt', data.media_type.alt)
+            iconImg.id = 'icon'
+            const h3Text = document.createElement('h3')
+            h3Text.textContent = data.resource
+            const pText = document.createElement('p')
+            pText.textContent = data.textContent
+            divResource.appendChild(iconImg)
+            divResource.appendChild(h3Text)
+            divResource.appendChild(pText)
 
-                mainContent.appendChild(divResource)
-                // console.log(data.media_type.media_icon)
-            })
+            mainContent.appendChild(divResource)
+        })
     } else {
         console.error("❌ Failed to load JSON data.")
     }

@@ -9,7 +9,11 @@ const addCircles = async () => {
             .sort((a, b) => a.title.localeCompare(b.title))
             .map(resource => {
                 const resourceDiv = document.createElement('div')
+                const aLearnB = document.createElement('a')
+                aLearnB.setAttribute('href', resource.learnMore)
+                aLearnB.className = 'area-click'
                 resourceDiv.className = "resource-item resource-button"
+                
 
                 const topicImg = document.createElement('img')
                 topicImg.setAttribute('src', resource.image)
@@ -27,7 +31,9 @@ const addCircles = async () => {
                 resourceDiv.appendChild(h3Title)
                 resourceDiv.appendChild(aLearn)
 
-                resourceItem.appendChild(resourceDiv)
+                aLearnB.appendChild(resourceDiv)
+
+                resourceItem.appendChild(aLearnB)
             })
         // console.log("✅ JSON Data Loaded:", myData)
     } else {

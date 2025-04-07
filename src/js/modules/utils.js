@@ -42,7 +42,7 @@ const formattedTitle = () => {
     if (path.includes('/src/pages/about')) {
         return 'About Us'
     } else if (path.includes('/src/pages/submit')) {
-        return 'Submit'
+        return 'Submit a Resource'
     } else if (path.includes('/src/pages/contact')) {
         return 'Contact Us'
     } else if (!path.includes("/src/pages/topics/")) {
@@ -59,4 +59,22 @@ const settingBackground = (element) => {
     }
 }
 
-export { mainTitle, formattedTitle, formatingPathName, settingBackground }
+const ignorePrefixes = ["a ", "an ", "the ", "dr. "];
+
+const sortByTitleIgnoringPrefixes = (dataArray) => {
+    return dataArray.slice().sort((a, b) => {
+        const normalize = (str) => {
+            const lower = str.toLowerCase();
+            for (const prefix of ignorePrefixes) {
+                if (lower.startsWith(prefix)) {
+                    return lower.slice(prefix.length);
+                }
+            }
+            return lower;
+        };
+        return normalize(a.resource).localeCompare(normalize(b.resource));
+    });
+}
+
+
+export { mainTitle, formattedTitle, formatingPathName, settingBackground, sortByTitleIgnoringPrefixes }
