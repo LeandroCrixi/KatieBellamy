@@ -39,11 +39,11 @@ const mainTitle = () => {
 }
 
 const formattedTitle = () => {
-    if (path === '/src/pages/aboutUs.html') {
+    if (path.includes('/src/pages/about')) {
         return 'About Us'
-    } else if (path === '/src/pages/submit.html') {
+    } else if (path.includes('/src/pages/submit')) {
         return 'Submit'
-    } else if (path === '/src/pages/contactUs.html') {
+    } else if (path.includes('/src/pages/contact')) {
         return 'Contact Us'
     } else if (!path.includes("/src/pages/topics/")) {
         return "<br><br><span>Community Resources Hub</span>";

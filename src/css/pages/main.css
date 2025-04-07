@@ -20,22 +20,6 @@
       margin: 0px 0px 50px 0px;
   }
 
-  #intro-text {
-      color: #ac785d;
-      font-size: 35px;
-      line-height: 33.2125px;
-      margin: 0px 0px 50px 0px;
-  }
-
-  #resource-text {
-      box-sizing: border-box;
-      color: #3f4a49;
-      font-size: 20px;
-      line-height: 35px;
-      padding: 0px 0px 60px 0px;
-      margin: 0px;
-  }
-
   /* Resources Section (circles) */
   .resources {
       display: flex;

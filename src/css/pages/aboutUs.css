@@ -1,19 +1,72 @@
-.who-we-are{
-    display: flex;
+.who-we-are,
+.approach {
+    display: grid;
     padding: 40px 160px;
     gap: 60px;
-    background-image: url('../../../public/assets/Website_background.png');
 }
 
-.who-we-are h2{
-    /* color: #3f4a49; */
-    color: var(--blue);
+.who-we-are {
+    background-image: url('../../../public/assets/Website_background.png');
+    grid-template-columns: 500px 1fr;
+}
+
+.approach {
+    background: var(--green-cl-bg);
+    grid-template-columns: 1fr 500px;
+}
+
+.who-we-are h2,
+.approach h2 {
     font-size: 44px;
     line-height: 50px;
+    font-weight: 200;
 }
 
-.who-we-are-img{
+.who-we-are h2 {
+    color: var(--main-color);
+}
+
+.approach h2,
+.approach .main-font {
+    color: #fff;
+}
+
+.approach .highlight-font {
+    color: var(--highlight-color-2);
+}
+
+.about-us-img {
     border: 2px solid black;
-    width: 300px;
+    width: 400px;
+    height: 500px;
+    margin: 100px 50px;
+}
+
+.who-we-are .section-button,
+.approach .section-button {
+    margin: 0 160px;
+}
+
+.br-page {
     height: 400px;
+}
+
+@media screen and (max-width: 820px) {
+
+    .who-we-are,
+    .approach {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 100px;
+        gap: 40px;
+    }
+
+    .about-us-img {
+        width: 300px;
+        height: 400px;
+    }
+
+    .who-we-are .section-button,
+    .approach .section-button {
+        margin: 0 100px;
+    }
 }

@@ -1,6 +1,9 @@
 /* General Styles */
-:root{
-    --blue: blue;
+:root {
+    --main-color: #3f4a49;
+    --highlight-color: #ac785d;
+    --highlight-color-2: #f0d6cc;
+    --green-cl-bg: #7F8563;
 }
 
 body {
@@ -11,11 +14,26 @@ body {
     background-color: #f9f9f9;
 }
 
-.adonis-web{
+.main-font {
+    color: var(--main-color);
+    font-size: 23px;
+    line-height: 35px;
+    padding: 0px 0px 60px 0px;
+    margin: 0px;
+}
+
+.highlight-font {
+    color: var(--highlight-color);
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: normal;
+    margin: 0px 0px 50px 0px;
+}
+
+.adonis-web {
     font-family: 'Libre Baskerville';
 }
 
-.europa{
+.europa {
     font-family: 'Poppins';
 }
-
