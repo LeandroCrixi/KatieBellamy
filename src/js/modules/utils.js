@@ -64,15 +64,15 @@ const ignorePrefixes = ["a ", "an ", "the ", "dr. "];
 const sortByTitleIgnoringPrefixes = (dataArray) => {
     return dataArray.slice().sort((a, b) => {
         const normalize = (str) => {
-            const lower = str.toLowerCase();
+            const lower = str?.toLowerCase();
             for (const prefix of ignorePrefixes) {
-                if (lower.startsWith(prefix)) {
+                if (lower?.startsWith(prefix)) {
                     return lower.slice(prefix.length);
                 }
             }
             return lower;
         };
-        return normalize(a.resource).localeCompare(normalize(b.resource));
+        return normalize(a.resource_media.resource)?.localeCompare(normalize(b.resource_media.resource));
     });
 }
 

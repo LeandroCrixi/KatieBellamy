@@ -15,13 +15,13 @@ const addResource = async () => {
             divResource.setAttribute('href', data.url)
             divResource.setAttribute('target', '_blank')
             const iconImg = document.createElement('img')
-            iconImg.setAttribute('src', data.media_type.media_icon)
-            iconImg.setAttribute('alt', data.media_type.alt)
+            iconImg.setAttribute('src', data.resource_media.media_type.media_icon)
+            iconImg.setAttribute('alt', data.resource_media.media_type.alt)
             iconImg.id = 'icon'
             const h3Text = document.createElement('h3')
-            h3Text.textContent = data.resource
+            h3Text.textContent = data.resource_media.resource
             const pText = document.createElement('p')
-            pText.textContent = data.textContent
+            pText.textContent = data.resource_media.textContent
             divResource.appendChild(iconImg)
             divResource.appendChild(h3Text)
             divResource.appendChild(pText)

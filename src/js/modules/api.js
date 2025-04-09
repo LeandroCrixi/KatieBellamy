@@ -8,8 +8,17 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 const fetchResourceMedia = async () => {
     try {
         const { data, error } = await supabase
-            .from('resource_media')
-            .select('resources_topic(id, title), media_type(id, media, media_icon, alt), resourceTopicId, resource, url, mediaTypeId, textContent')
+            // .from('resource_media')
+            // .select(`
+            //     resources_topic(id, title),
+            //     media_type(id, media, media_icon, alt),
+            //     resource, url, mediaTypeId, textContent`)
+            // .eq('resources_topic.title', `${formattedTitle()}`)
+            .from('topic_media')
+            .select(`
+                    resource_media(resource, url, mediaTypeId, textContent, 
+                    media_type(id, media, media_icon, alt)),
+                    resources_topic(id, title)`)
             .eq('resources_topic.title', `${formattedTitle()}`)
             .not('resources_topic', 'is', null)
 
@@ -17,7 +26,8 @@ const fetchResourceMedia = async () => {
             console.error('Error details:', error)
             throw error;
         }
-        // console.log(data)
+        console.log(data)
+        // console.log("Formatted title:", formattedTitle());
         return data
     } catch (error) {
         console.error('Error fetching data:', error.message)
