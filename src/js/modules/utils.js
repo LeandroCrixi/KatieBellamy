@@ -32,33 +32,6 @@ const formatingPathName = () => {
     return formattedTitle;
 }
 
-const mainTitle = () => {
-    if (path === "/") {
-        return "Bellamy & Associates"
-    }
-}
-
-const formattedTitle = () => {
-    if (path.includes('/src/pages/about')) {
-        return 'About Us'
-    } else if (path.includes('/src/pages/submit')) {
-        return 'Submit a Resource'
-    } else if (path.includes('/src/pages/contact')) {
-        return 'Contact Us'
-    } else if (!path.includes("/src/pages/topics/")) {
-        return "<br><br><span>Community Resources Hub</span>";
-    }
-
-    return formatingPathName()
-};
-
-const settingBackground = (element) => {
-    if (window.matchMedia("(max-width: 420px)").matches) {
-        element.style.background = 'none'
-        element.style.backgroundColor = '#DCD9D0'
-    }
-}
-
 const ignorePrefixes = ["a ", "an ", "the ", "dr. "];
 
 const sortByTitleIgnoringPrefixes = (dataArray) => {
@@ -76,5 +49,12 @@ const sortByTitleIgnoringPrefixes = (dataArray) => {
     });
 }
 
+const createElement = (type, attributes = {}, text = "") => {
+    const el = document.createElement(type);
+    Object.entries(attributes).forEach(([key, value]) => el.setAttribute(key, value));
+    if (text) el.textContent = text;
+    return el;
+};
 
-export { mainTitle, formattedTitle, formatingPathName, settingBackground, sortByTitleIgnoringPrefixes }
+
+export { formatingPathName, sortByTitleIgnoringPrefixes, createElement }

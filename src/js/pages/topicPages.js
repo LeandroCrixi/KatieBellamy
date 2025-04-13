@@ -8,20 +8,16 @@ const addResource = async () => {
     if (myData) {
         const sortedData = sortByTitleIgnoringPrefixes(myData);
         myData
-        // .sort((a, b) => a.resource.localeCompare(b.resource))
         sortedData.map(data => {
-            const divResource = document.createElement('a')
-            divResource.className = 'topic-resource'
-            divResource.setAttribute('href', data.url)
-            divResource.setAttribute('target', '_blank')
-            const iconImg = document.createElement('img')
-            iconImg.setAttribute('src', data.resource_media.media_type.media_icon)
-            iconImg.setAttribute('alt', data.resource_media.media_type.alt)
-            iconImg.id = 'icon'
-            const h3Text = document.createElement('h3')
-            h3Text.textContent = data.resource_media.resource
-            const pText = document.createElement('p')
-            pText.textContent = data.resource_media.textContent
+            const myData = data.resource_media
+            const divResource = createElement('a', { class: 'topic-resource', href: data.url, target: '_blank' })
+            const iconImg = createElement('img', {
+                id: 'icon',
+                src: myData.media_type.media_icon,
+                alt: myData.media_type.alt
+            })
+            const h3Text = createElement('h3', {}, myData.resource)
+            const pText = document.createElement('p', {}, myData.textContent)
             divResource.appendChild(iconImg)
             divResource.appendChild(h3Text)
             divResource.appendChild(pText)

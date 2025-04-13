@@ -1,5 +1,6 @@
 import { createClient } from 'https://cdn.skypack.dev/@supabase/supabase-js'
-import { formattedTitle, formatingPathName } from './utils.js'
+import {formatingPathName } from './utils.js'
+import { formattedTitle } from './dom.js'
 
 const SUPABASE_URL = 'https://jkugrjfgpohuupvnvakm.supabase.co'
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImprdWdyamZncG9odXVwdm52YWttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA1OTM4MTEsImV4cCI6MjA1NjE2OTgxMX0.IpbK-ZBAVn3mjxtKubsekxYKppHG3rGg27Nk1u4aEk8'

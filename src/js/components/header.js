@@ -1,7 +1,7 @@
 import { fetchResourcesTopic, fetchBgImg } from "../modules/api.js"
-import { mainTitle, formattedTitle, settingBackground } from "../modules/utils.js"
 import { toggleMenu, addShowClass, removeShowClass } from "../modules/events.js"
-import { favicon } from "../modules/dom.js"
+import { favicon, mainTitle, formattedTitle, settingBackground } from "../modules/dom.js"
+import { createElement } from "../modules/utils.js"
 
 const header = async () => {
     favicon()
@@ -27,23 +27,21 @@ const header = async () => {
         const headerContent = document.getElementById('header-content')
 
         // Create logo
-        const divLogo = document.createElement('div')
-        divLogo.className = 'logo'
-        const aLogo = document.createElement('a')
-        aLogo.setAttribute('href', '/')
-        const imgLogo = document.createElement('img')
-        imgLogo.setAttribute('src', '/public/assets/logo.png')
-        imgLogo.setAttribute('alt', 'Logo')
+        const divLogo = createElement('div', { class: 'logo' })
+        const aLogo = createElement('a', { href: '/' })
+        const imgLogo = createElement('img', {
+            src: '/public/assets/logo.png',
+            alt: 'Logo'
+        })
         aLogo.appendChild(imgLogo)
         divLogo.appendChild(aLogo)
 
         // Create the title
-        const h1Nav = document.createElement('h1')
-        h1Nav.id = 'title'
-        h1Nav.className = 'adonis-web'
-        h1Nav.textContent = mainTitle()
-        const spanH1 = document.createElement('span')
-        spanH1.className = 'highlight'
+        const h1Nav = createElement('h1', {
+            id: 'title',
+            class: 'adonis-web'
+        }, mainTitle())
+        const spanH1 = createElement('span', { class: 'highlight' })
         spanH1.innerHTML = formattedTitle()
         h1Nav.appendChild(spanH1)
 
@@ -71,8 +69,7 @@ const nav = async () => {
 
         const navBar = document.createElement('nav')
 
-        const divBurger = document.createElement('div')
-        divBurger.className = 'burger'
+        const divBurger = createElement('div', { class: 'burger' })
         divBurger.addEventListener('click', toggleMenu)
         const bar1 = document.createElement('div')
         bar1.classList.add('bar', 'bar1')
@@ -84,25 +81,20 @@ const nav = async () => {
         divBurger.appendChild(bar2)
         divBurger.appendChild(bar3)
 
-        const ulNavBar = document.createElement('ul')
-        ulNavBar.className = 'navBar'
-        ulNavBar.id = 'navBar'
+        const ulNavBar = createElement('ul', {
+            class: 'navBar',
+            id: 'navBar'
+        })
         navBar.appendChild(divBurger)
         navBar.appendChild(ulNavBar)
 
         const liAbout = document.createElement('li')
-        const liTopic = document.createElement('li')
-        liTopic.className = 'dropdown'
+        const liTopic = createElement('li', {class: 'dropdown'})
         const liSubmit = document.createElement('li')
         const liContact = document.createElement('li')
-        const aAbout = document.createElement('a')
-        aAbout.textContent = 'About Us'
-        aAbout.setAttribute('href', '/src/pages/aboutUs.html')
-        const aTopic = document.createElement('a')
-        aTopic.textContent = 'Topics'
-        aTopic.className = 'dropdown-btn'
-        const ulDropdown = document.createElement('ul')
-        ulDropdown.classList.add('dropdown-content')
+        const aAbout = createElement('a', {href: '/src/pages/aboutUs.html'}, 'About Us')
+        const aTopic = createElement('a', {class: 'dropdown-btn'}, 'Topics')
+        const ulDropdown = createElement('ul', {class: 'dropdown-content'})
         aTopic.addEventListener('mouseover', addShowClass);
         ulDropdown.addEventListener('mouseover', addShowClass); // Keep menu open when inside
 
@@ -113,20 +105,14 @@ const nav = async () => {
             .sort((a, b) => a.title.localeCompare(b.title))
             .map(resource => {
                 const li = document.createElement('li')
-                const a = document.createElement('a')
-                a.setAttribute('href', resource.learnMore)
-                a.textContent = resource.title
+                const a = createElement('a', {href: resource.learnMore}, resource.title)
 
                 li.appendChild(a)
                 ulDropdown.appendChild(li)
             })
 
-        const aSubmit = document.createElement('a')
-        aSubmit.textContent = 'Submit a Resource'
-        aSubmit.setAttribute('href', '/src/pages/submit.html')
-        const aContact = document.createElement('a')
-        aContact.textContent = 'Contact Us'
-        aContact.setAttribute('href', '/src/pages/contactUs.html')
+        const aSubmit = createElement('a', {href: '/src/pages/submit.html'}, 'Submit a Resource')
+        const aContact = createElement('a', {href: '/src/pages/contactUs.html'}, 'Contact Us')
         liAbout.appendChild(aAbout)
         liTopic.appendChild(aTopic)
         liTopic.appendChild(ulDropdown)

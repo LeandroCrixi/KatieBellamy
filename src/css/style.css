@@ -1,10 +1,19 @@
 /* Immporting Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import './modules/global.css';
-@import './modules/components.css';
-@import './modules/header.css';
+
+/* Global */
+@import './global/global.css';
+@import './global/header.css';
+@import './global/footer.css';
+
+/* utils */
+@import './utils/colors.css';
+@import './utils/typography.css';
+@import './utils/components.css';
+
+/* pages */
 @import './pages/main.css';
 @import './pages/topicPages.css';
 @import './pages/aboutUs.css';
 @import './pages/submit.css';
-@import './modules/footer.css';
+@import './pages/contactUs.css';

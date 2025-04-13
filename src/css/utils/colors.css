@@ -1,0 +1,64 @@
+:root {
+    --color-0: #ffffff;
+    /* White */
+    --color-1: #f0d6cc;
+    /* Light pink-beige (highlight-color-2) */
+    --color-2: #ac785d;
+    /* Warm brown (highlight-color) */
+    --color-3: #7F8563;
+    /* Earthy green (green-cl-bg) */
+    --color-4: #3f4a49;
+    /* Deep gray-green (main-color) */
+    --color-5: #000000;
+    /* Black */
+}
+
+/* Background color utilities */
+.bg-color-0 {
+    background-color: var(--color-0);
+}
+
+.bg-color-1 {
+    background-color: var(--color-1);
+}
+
+.bg-color-2 {
+    background-color: var(--color-2);
+}
+
+.bg-color-3 {
+    background-color: var(--color-3);
+}
+
+.bg-color-4 {
+    background-color: var(--color-4);
+}
+
+.bg-color-5 {
+    background-color: var(--color-5);
+}
+
+/* Text color utilities */
+.text-color-0 {
+    color: var(--color-0);
+}
+
+.text-color-1 {
+    color: var(--color-1);
+}
+
+.text-color-2 {
+    color: var(--color-2);
+}
+
+.text-color-3 {
+    color: var(--color-3);
+}
+
+.text-color-4 {
+    color: var(--color-4);
+}
+
+.text-color-5 {
+    color: var(--color-5);
+}

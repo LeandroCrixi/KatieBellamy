@@ -8,23 +8,15 @@ const addCircles = async () => {
         myData
             .sort((a, b) => a.title.localeCompare(b.title))
             .map(resource => {
-                const resourceDiv = document.createElement('div')
-                const aLearnB = document.createElement('a')
-                aLearnB.setAttribute('href', resource.learnMore)
-                aLearnB.className = 'area-click'
-                resourceDiv.className = "resource-item resource-button"
-                
+                const resourceDiv = createElement('div', { className: "resource-item resource-button" })
+                const aLearnB = createElement('a', { className: 'area-click', href: resource.learnMore })
 
-                const topicImg = document.createElement('img')
-                topicImg.setAttribute('src', resource.image)
-                topicImg.setAttribute('alt', resource.alt)
-                topicImg.id = "circle"
+
+                const topicImg = createElement('img', { id: "circle", src: resource.image, alt: resource.alt })
 
                 const h3Title = document.createElement('h3')
                 h3Title.innerHTML = resource.title
-                const aLearn = document.createElement('a')
-                aLearn.className = 'button'
-                aLearn.setAttribute('href', resource.learnMore)
+                const aLearn = document.createElement('a', {class: 'button', href: resource.learnMore})
                 aLearn.innerHTML = 'Learn More'
 
                 resourceDiv.appendChild(topicImg)

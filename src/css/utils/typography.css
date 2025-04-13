@@ -1,0 +1,23 @@
+.adonis-web {
+    font-family: 'Libre Baskerville';
+}
+
+.europa {
+    font-family: 'Poppins';
+}
+
+.main-font {
+    color: var(--main-color);
+    font-size: 23px;
+    line-height: 35px;
+    padding: 0px 0px 60px 0px;
+    margin: 0px;
+}
+
+.highlight-font {
+    color: var(--highlight-color);
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: normal;
+    margin: 0px 0px 50px 0px;
+}
