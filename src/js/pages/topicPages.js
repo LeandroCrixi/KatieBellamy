@@ -11,7 +11,7 @@ const addResource = async () => {
         myData
         sortedData.map(data => {
             const myData = data.resource_media
-            const divResource = createElement('a', { class: 'topic-resource', href: data.url, target: '_blank' })
+            const divResource = createElement('a', { class: 'topic-resource', href: myData.url, target: '_blank' })
             const iconImg = createElement('img', {
                 id: 'icon',
                 src: myData.media_type.media_icon,

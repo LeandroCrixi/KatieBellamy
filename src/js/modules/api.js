@@ -27,7 +27,7 @@ const fetchResourceMedia = async () => {
             console.error('Error details:', error)
             throw error;
         }
-        console.log(data)
+        // console.log(data)
         // console.log("Formatted title:", formattedTitle());
         return data
     } catch (error) {
