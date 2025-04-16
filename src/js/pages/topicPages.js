@@ -1,5 +1,6 @@
 import { fetchResourceMedia } from "../modules/api.js"
 import { sortByTitleIgnoringPrefixes } from "../modules/utils.js"
+import { createElement } from "../modules/utils.js"
 
 const addResource = async () => {
     const myData = await fetchResourceMedia()
@@ -17,7 +18,7 @@ const addResource = async () => {
                 alt: myData.media_type.alt
             })
             const h3Text = createElement('h3', {}, myData.resource)
-            const pText = document.createElement('p', {}, myData.textContent)
+            const pText = createElement('p', {}, myData.textContent)
             divResource.appendChild(iconImg)
             divResource.appendChild(h3Text)
             divResource.appendChild(pText)

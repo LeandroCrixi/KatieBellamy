@@ -35,10 +35,10 @@ const footer = async () => {
     const divLinks = createElement('div', {class: 'divLinks'})
 
     // Creating Quick Links Div
-    const quickLinks = document.createElement('div', {class: 'quick-links'})
-    const quickLinkP = document.createElement('p', {class: 'Quick Links'})
+    const quickLinks = createElement('div', {class: 'quick-links'})
+    const quickLinkP = createElement('p', {class: 'Quick Links'})
     quickLinks.appendChild(quickLinkP)
-    const quickLinkDiv = document.createElement('div', {class: 'LinkDiv'})
+    const quickLinkDiv = createElement('div', {class: 'LinkDiv'})
     quickLinks.appendChild(quickLinkDiv)
 
     const linkAboutUs = createElement('a', {href: '/src/pages/aboutUs.html'}, 'About Us')
@@ -51,10 +51,10 @@ const footer = async () => {
     divLinks.appendChild(quickLinks)
 
     // Creating Topics Links Div
-    const topicsLinks = document.createElement('div', {class: 'quick-links'})
-    const topicP = document.createElement('p', {}, 'Topics')
+    const topicsLinks = createElement('div', {class: 'quick-links'})
+    const topicP = createElement('p', {}, 'Topics')
     topicsLinks.appendChild(topicP)
-    const topicDiv = document.createElement('div', {class: 'LinkDiv'})
+    const topicDiv = createElement('div', {class: 'LinkDiv'})
     topicsLinks.appendChild(topicDiv)
     try {
         const myData = await fetchResourcesTopic()
@@ -73,8 +73,8 @@ const footer = async () => {
 
     footerContent.appendChild(divLinks)
 
-    const p = document.createElement('p', {id: 'textFooter'})
-    const span = document.createElement('span', {id: 'current-year'})
+    const p = createElement('p', {id: 'textFooter'})
+    const span = createElement('span', {id: 'current-year'})
     p.innerHTML = `&copy; `;
     p.appendChild(span); // Append the span element
     p.innerHTML += `, ${companyName}, All rights reserved.`;
