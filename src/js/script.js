@@ -1,5 +1,6 @@
 import { header } from './components/header.js'
 import { footer } from './components/footer.js'
+import { handleSubmit } from './modules/events.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -25,6 +26,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         case '/src/pages/topics/mental_health.html':
         case '/src/pages/topics/mindfulness.html':
         case '/src/pages/topics/queer_inclusion.html':
+        case '/src/pages/topics/recovery_resources.html':
+        case '/src/pages/topics/somatic_healing.html':
             const { addResource } = await import('./pages/topicPages.js');
             addResource();
             break;
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         default:
             console.warn('No specific scripts for this page.');
     }
-
     // footer section
     footer()
+    handleSubmit()
 })

@@ -2,7 +2,7 @@
 header {
     border-width: 20px 50px 20px 50px;
     border-style: solid;
-    border-color: #DCD9D0;
+    border-color: var(--color-6);
     font-weight: 500;
 }
 
@@ -15,12 +15,10 @@ header {
 
 .logo img {
     width: 130px;
-    cursor: pointer;
 }
 
 .navBar {
     display: flex;
-    list-style: none;
     padding: 0;
     flex-wrap: wrap;
     gap: 30px;
@@ -33,13 +31,11 @@ header {
 }
 
 .navBar a {
-    color: rgb(63, 74, 73);
-    text-decoration: none;
+    color: var(--color-4);
     font-size: 1.4rem;
     padding: 5px 10px;
     transition: border-bottom 0.5s ease-in-out;
     border-bottom: 1px solid transparent;
-    cursor: pointer;
 }
 
 .dropdown-content {
@@ -47,9 +43,8 @@ header {
     position: absolute;
     left: 140px;
     top: 40px;
-    background-color: #fff;
+    background-color: var(--color-0);
     min-width: 150px;
-    list-style: none;
     padding: 20px 5px;
     text-align: left;
     z-index: 1;
@@ -68,11 +63,11 @@ header {
 }
 
 .navBar a:hover {
-    border-bottom: 1px solid rgb(63, 74, 73);
+    border-bottom: 1px solid var(--color-4);
 }
 
 .navBar li a.active {
-    border-bottom: 1px solid rgb(63, 74, 73);
+    border-bottom: 1px solid var(--color-4);
 }
 
 .burger {
@@ -80,7 +75,7 @@ header {
 }
 
 #title {
-    color: rgb(63, 74, 73);
+    color: var(--color-4);
     margin: 0px 0 60px 100px;
     font-weight: 400;
 }

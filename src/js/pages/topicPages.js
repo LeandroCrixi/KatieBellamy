@@ -5,6 +5,7 @@ import { createElement } from "../modules/utils.js"
 const addResource = async () => {
     const myData = await fetchResourceMedia()
     const mainContent = document.querySelector('.main-content')
+    mainContent.classList.add('web-bg')
 
     if (myData) {
         const sortedData = sortByTitleIgnoringPrefixes(myData);

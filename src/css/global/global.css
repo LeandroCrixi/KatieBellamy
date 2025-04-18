@@ -1,11 +1,4 @@
 /* General Styles */
-:root {
-    --main-color: #3f4a49;
-    --highlight-color: #ac785d;
-    --highlight-color-2: #f0d6cc;
-    --green-cl-bg: #7F8563;
-}
-
 body {
     font-family: 'Libre Baskerville';
     margin: 0;
@@ -14,26 +7,27 @@ body {
     background-color: #f9f9f9;
 }
 
-.main-font {
-    color: var(--main-color);
-    font-size: 23px;
-    line-height: 35px;
-    padding: 0px 0px 60px 0px;
-    margin: 0px;
+ul {
+    list-style: none;
 }
 
-.highlight-font {
-    color: var(--highlight-color);
-    font-size: 28px;
-    line-height: 33px;
-    font-weight: normal;
-    margin: 0px 0px 50px 0px;
+a {
+    text-decoration: none;
 }
 
-.adonis-web {
-    font-family: 'Libre Baskerville';
+a,
+img,
+button {
+    cursor: pointer
 }
 
-.europa {
-    font-family: 'Poppins';
+.web-bg {
+    background: url('../../../public/assets/Website_background.png') no-repeat center center/cover;
+}
+
+:root {
+    --main-color: #3f4a49;
+    --highlight-color: #ac785d;
+    --highlight-color-2: #f0d6cc;
+    --green-cl-bg: #7F8563;
 }

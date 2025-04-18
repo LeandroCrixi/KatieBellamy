@@ -11,10 +11,9 @@
 .topic-resource {
     display: block;
     width: 300px;
-    background: #fbe9de;
+    background: var(--color-8);
     justify-items: center;
     padding: 10px;
-    text-decoration: none;
     color: inherit;
     border-radius: 10px;
 }
@@ -28,7 +27,7 @@
 }
 
 .topic-resource:hover {
-    background: #f6c8ae;
+    background: var(--color-9);
 }
 
 #icon {

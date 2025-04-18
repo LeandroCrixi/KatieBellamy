@@ -43,6 +43,6 @@ const formattedTitle = () => {
     }
 
     return formatingPathName()
-}
+} 
 
 export { currentYear, favicon, mainTitle, formattedTitle, settingBackground }

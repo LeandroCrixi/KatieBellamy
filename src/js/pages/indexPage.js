@@ -10,7 +10,7 @@ const addCircles = async () => {
             .sort((a, b) => a.title.localeCompare(b.title))
             .map(resource => {
                 const resourceDiv = createElement('div', { class: "resource-item resource-button" })
-                const aLearnB = createElement('a', { class: 'area-click', href: resource.learnMore })
+                const aLearnB = createElement('a', { href: resource.learnMore })
 
                 const topicImg = createElement('img', { id: "circle", src: resource.image, alt: resource.alt })
 

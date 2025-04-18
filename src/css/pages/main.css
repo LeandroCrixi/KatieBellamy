@@ -6,7 +6,6 @@
   }
 
   .welcome {
-      background: url('../../../public/assets/Website_background.png') no-repeat center center/cover;
       height: 100%;
       padding: 80px 210px;
       justify-content: center;
@@ -25,14 +24,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      background: #DCD9D0;
+      background: var(--color-6);
       padding: 60px;
       justify-content: center;
-  }
-
-  .area-click {
-      cursor: pointer;
-      text-decoration: none;
   }
 
   .resource-item {
@@ -50,7 +44,7 @@
 
   .resource-item h3 {
       display: flex;
-      color: #825a4a;
+      color: var(--color-7);
       font-size: 28px;
       font-weight: 200;
       line-height: 33px;

@@ -11,6 +11,10 @@
     /* Deep gray-green (main-color) */
     --color-5: #000000;
     /* Black */
+    --color-6: #DCD9D0;
+    --color-7: #825a4a;
+    --color-8: #fbe9de;
+    --color-9: #f6c8ae
 }
 
 /* Background color utilities */
@@ -38,6 +42,10 @@
     background-color: var(--color-5);
 }
 
+.bg-color-6 {
+    background-color: var(--color-6);
+}
+
 /* Text color utilities */
 .text-color-0 {
     color: var(--color-0);
@@ -61,4 +69,8 @@
 
 .text-color-5 {
     color: var(--color-5);
+}
+
+.text-color-6 {
+    color: var(--color-6);
 }

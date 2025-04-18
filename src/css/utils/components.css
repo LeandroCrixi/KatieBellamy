@@ -3,11 +3,10 @@
     font-family: 'Poppins';
     font-size: 17px;
     font-weight: 450;
-    text-decoration: none;
     letter-spacing: 1.7px;
     padding: 14px 22px;
     text-transform: uppercase;
-    cursor: pointer;
+    text-align: center;
 }
 
 .section-button {

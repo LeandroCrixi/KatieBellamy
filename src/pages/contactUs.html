@@ -14,18 +14,43 @@
     </header>
 
     <main>
-        <div class="contact-us">
+        <div class="contact-us web-bg">
             <div>
-                <h3>Get in touch.</h3>
-                <p>We’re based in Chicago, IL, but provide most services virtually.
-                    In-person arrangements for Reiki and trainings are available.</p>
-                <p>If you’re ready to book a consultation call for any service or to book a Reiki session, click below.
-                </p>
+                <!-- <h2 class=".adonis-web h2-text">Get in touch.</h2>
+                <p class="highlight-font">To reach out with an inquiry, please fill out the form below and we’ll get
+                    back to you ASAP</p> -->
+                <img src="../../public/assets/Contact_page_image.png" alt="">
             </div>
-            <div>
-                <p>To reach out about other services, please complete the form below and we’ll get back to you ASAP.</p>
-                <p>Please check your spam folder in a few days if you haven’t seen an email reply, 
-                    or add contact@katie-bellamy.com to your contacts.</p>
+            <div class="form">
+                <h2 class=".adonis-web h2-text">Get in touch.</h2>
+                <p class="highlight-font">To reach out with an inquiry, please fill out the form below and we’ll get
+                    back to you ASAP</p>
+                <form id="contact-form" action="https://formsubmit.co/leandro.crixi@hotmail.com" target="_blank"
+                    method="POST" onsubmit="return handleSubmit(event)">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" required>
+
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number (with country code)</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+1 312 555 1234">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button class="button section-button" type="submit">Submit</button>
+
+                    <div id="confirmation-message">
+                        Thank you for your submission! We’ll get back to you soon.
+                    </div>
+                </form>
             </div>
         </div>
     </main>
