@@ -22,12 +22,5 @@ button {
 }
 
 .web-bg {
-    background: url('../../../public/assets/Website_background.png') no-repeat center center/cover;
-}
-
-:root {
-    --main-color: #3f4a49;
-    --highlight-color: #ac785d;
-    --highlight-color-2: #f0d6cc;
-    --green-cl-bg: #7F8563;
+    background: url('../../../public/assets/Website_background.png');
 }

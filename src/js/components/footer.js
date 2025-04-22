@@ -78,7 +78,14 @@ const footer = async () => {
     p.innerHTML = `&copy; `;
     p.appendChild(span); // Append the span element
     p.innerHTML += `, ${companyName}, All rights reserved.`;
+
     footer.appendChild(p)
+
+    const leoCrixi = createElement('p', {id: 'dev'})
+    const devLink = createElement('a', {href: 'https://leandro-crixi.netlify.app/'}, 'Leo Crixi')
+    leoCrixi.innerHTML = '<br> Website design and managed by '
+    leoCrixi.appendChild(devLink)
+    footer.appendChild(leoCrixi)
 
     currentYear()
 }

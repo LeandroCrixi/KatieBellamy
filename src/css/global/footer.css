@@ -63,6 +63,21 @@ footer p {
     text-align: center;
 }
 
+#dev{
+    display: block;
+    padding-top: 10px;
+    font-size: .8rem;
+}
+
+#dev a{
+    color: var(--color-9);
+    text-decoration: underline;
+}
+
+#dev a:hover{
+    color: var(--color-0);
+}
+
 @media screen and (max-width: 820px) {
     .footer-content h3 {
         font-size: 2rem;
