@@ -6,7 +6,6 @@
     --color-2: #ac785d;
     /* Warm brown (highlight-color) */
     --color-3: #7F8563;
-    /* --color-3: #DCD9D0; */
     /* Earthy green (green-cl-bg) */
     --color-4: #3f4a49;
     /* Deep gray-green (main-color) */
@@ -15,7 +14,9 @@
     --color-6: #DCD9D0;
     --color-7: #825a4a;
     --color-8: #fbe9de;
-    --color-9: #f6c8ae;
+    --color-9: #E9A37F;
+    --color-10: #F8F4EC;
+    --color-11: #41634e;
 }
 
 /* Background color utilities */

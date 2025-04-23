@@ -15,8 +15,7 @@ const header = async () => {
 
         myData.forEach((data) => {
             if (!backgroundSet && data && data.bg_img) {
-                // header.style.background = `#DCD9D0 url(${data.bg_img}) 87% center/360px no-repeat`;
-                header.style.background = `#7F8563 url(${data.bg_img}) 87% center/360px no-repeat`;
+                header.style.background = `#F8F4EC url(${data.bg_img}) 87% center/360px no-repeat`;
                 settingBackground(header)
                 backgroundSet = true; // Mark as set
             }
