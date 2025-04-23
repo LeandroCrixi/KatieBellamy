@@ -1,5 +1,4 @@
 .main-content {
-    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     min-width: 0; /* Fix Safari shrinking issues */
@@ -35,7 +34,18 @@
 }
 
 .page-break{
-    display: block;
-    background-image: url('../../../public/assets/test.png');
-    height: 500px;
+    text-align: center;
+    padding: 40px;
+    background: var(--color-10);
+}
+
+.page-break form{
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+}
+
+
+.page-break a{
+    padding: 8px;
 }

@@ -36,7 +36,7 @@ const footer = async () => {
 
     // Creating Quick Links Div
     const quickLinks = createElement('div', {class: 'quick-links'})
-    const quickLinkP = createElement('p', {class: 'Quick Links'})
+    const quickLinkP = createElement('p', {}, 'Quick Links')
     quickLinks.appendChild(quickLinkP)
     const quickLinkDiv = createElement('div', {class: 'LinkDiv'})
     quickLinks.appendChild(quickLinkDiv)
