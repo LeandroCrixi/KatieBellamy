@@ -12,6 +12,11 @@
       text-align: center;
   }
 
+  .welcome span a {
+      font-weight: bold;
+      text-decoration: underline;
+  }
+
   #intro-title {
       font-family: 'Great Vibes';
       font-size: 5rem;

@@ -41,7 +41,7 @@ const formattedTitle = () => {
     } else if (path.includes('/src/pages/contact')) {
         return 'Contact Us'
     } else if (!path.includes("/src/pages/topics/")) {
-        return "<br><br><span>Community Resources Hub</span>";
+        return "<br><span>Community Resources Hub</span>";
     }
 
     return formatingPathName()
