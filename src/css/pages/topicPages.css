@@ -33,3 +33,9 @@
 #icon {
     width: 40px;
 }
+
+.page-break{
+    display: block;
+    background-image: url('../../../public/assets/test.png');
+    height: 500px;
+}

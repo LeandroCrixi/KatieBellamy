@@ -21,6 +21,9 @@ button {
     cursor: pointer
 }
 
-.web-bg {
+.web-bg-img {
     background: url('../../../public/assets/Website_background.png');
+}
+.web-bg {
+    background-color: var(--color-3);
 }

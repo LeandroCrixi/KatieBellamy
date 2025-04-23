@@ -15,13 +15,15 @@ const header = async () => {
 
         myData.forEach((data) => {
             if (!backgroundSet && data && data.bg_img) {
+                // header.style.background = `#F8F4EC url(${data.bg_img}) 87% center/360px no-repeat`;
                 header.style.background = `#F8F4EC url(${data.bg_img}) 87% center/360px no-repeat`;
                 settingBackground(header)
                 backgroundSet = true; // Mark as set
             }
         });
         if (!backgroundSet) {
-            header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
+            // header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
+            header.style.background = "#F8F4EC url('../../../public/assets/Homepage_Image.png') 87% center/360px no-repeat";
             settingBackground(header)
         }
         const headerContent = document.getElementById('header-content')
@@ -89,12 +91,12 @@ const nav = async () => {
         navBar.appendChild(ulNavBar)
 
         const liAbout = document.createElement('li')
-        const liTopic = createElement('li', {class: 'dropdown'})
+        const liTopic = createElement('li', { class: 'dropdown' })
         const liSubmit = document.createElement('li')
         const liContact = document.createElement('li')
-        const aAbout = createElement('a', {href: '/src/pages/aboutUs.html'}, 'About Us')
-        const aTopic = createElement('a', {class: 'dropdown-btn'}, 'Topics')
-        const ulDropdown = createElement('ul', {class: 'dropdown-content'})
+        const aAbout = createElement('a', { href: '/src/pages/aboutUs.html' }, 'About Us')
+        const aTopic = createElement('a', { class: 'dropdown-btn' }, 'Topics')
+        const ulDropdown = createElement('ul', { class: 'dropdown-content' })
         aTopic.addEventListener('mouseover', addShowClass);
         ulDropdown.addEventListener('mouseover', addShowClass); // Keep menu open when inside
 
@@ -105,14 +107,14 @@ const nav = async () => {
             .sort((a, b) => a.title.localeCompare(b.title))
             .map(resource => {
                 const li = document.createElement('li')
-                const a = createElement('a', {href: resource.learnMore}, resource.title)
+                const a = createElement('a', { href: resource.learnMore }, resource.title)
 
                 li.appendChild(a)
                 ulDropdown.appendChild(li)
             })
 
-        const aSubmit = createElement('a', {href: '/src/pages/submit.html'}, 'Submit a Resource')
-        const aContact = createElement('a', {href: '/src/pages/contactUs.html'}, 'Contact Us')
+        const aSubmit = createElement('a', { href: '/src/pages/submit.html' }, 'Submit a Resource')
+        const aContact = createElement('a', { href: '/src/pages/contactUs.html' }, 'Contact Us')
         liAbout.appendChild(aAbout)
         liTopic.appendChild(aTopic)
         liTopic.appendChild(ulDropdown)

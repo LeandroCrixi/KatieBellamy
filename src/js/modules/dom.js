@@ -15,7 +15,8 @@ const favicon = () => {
 const settingBackground = (element) => {
     if (window.matchMedia("(max-width: 420px)").matches) {
         element.style.background = 'none'
-        element.style.backgroundColor = '#DCD9D0'
+        // element.style.backgroundColor = '#DCD9D0'
+        element.style.backgroundColor = '#F8F4EC'
     }
 }
 
