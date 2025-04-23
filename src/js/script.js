@@ -1,4 +1,5 @@
 import { header } from './components/header.js'
+import { myPageBreak } from './pages/indexPage.js'
 import { footer } from './components/footer.js'
 import { handleSubmit } from './modules/events.js'
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         case '/':
             const { addCircles } = await import('./pages/indexPage.js');
             addCircles();
+            myPageBreak()
             break;
         case '/src/pages/topics/anti-fat_bias.html':
         case '/src/pages/topics/black_educators_&_orgs.html':

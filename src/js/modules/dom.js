@@ -1,4 +1,5 @@
 import { formatingPathName } from "./utils.js";
+import { createElement } from "./utils.js";
 
 const path = document.location.pathname; // Get "/src/pages/disability_justice.html"
 
@@ -44,6 +45,34 @@ const formattedTitle = () => {
     }
 
     return formatingPathName()
-} 
+}
 
-export { currentYear, favicon, mainTitle, formattedTitle, settingBackground }
+const pageBreak = () => {
+    const pageBreak = createElement('div', { class: 'page-break abhaya' });
+    const pbH2 = createElement('h2', {class: 'text-color-2'}, 'Stay in touch!')
+    const phP = createElement('p', {class: 'text-color-4'}, 'Join our newsletter to receive news and updates.')
+    pageBreak.appendChild(pbH2)
+    pageBreak.appendChild(phP)
+
+    // Create the form element
+    const form = createElement('form', { class: 'signup-form' })
+    // Submit Button
+    const submit = createElement('a',
+        {
+            class: 'button section-button',
+            type: 'submit',
+            href: 'http://eepurl.com/dK8pQQ',
+            target: '_blank'
+        },
+        "I'M IN!");
+    form.appendChild(submit);
+
+    const shareP = createElement('p', {class: 'text-color-4'}, 'I’ll never share your information.')
+    // Append the form to your desired container
+    pageBreak.appendChild(form);
+    pageBreak.appendChild(shareP)
+
+    return pageBreak
+}
+
+export { currentYear, favicon, mainTitle, formattedTitle, settingBackground, pageBreak }

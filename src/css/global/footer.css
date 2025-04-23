@@ -30,7 +30,6 @@ footer {
 }
 
 .divLinks {
-    display: -webkit-flex;
     display: flex;
     justify-content: center;
     text-align: left;
@@ -39,8 +38,11 @@ footer {
     font-size: 1.25rem;
 }
 
+.divLinks p{
+    text-align: left;
+}
+
 .LinkDiv {
-    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -61,6 +63,10 @@ footer p {
     font-size: 1.5rem;
     line-height: 30px;
     text-align: center;
+}
+
+#textFooter{
+    font-size: 1.4rem;
 }
 
 #dev{

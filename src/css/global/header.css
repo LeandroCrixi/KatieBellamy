@@ -1,12 +1,7 @@
 /* Header */
 header {
-    /* border-width: 20px 50px 20px 50px;
-    border-style: solid; */
-    /* border-color: var(--color-6);
-    border-color: var(--color-10); */
-    /* background-color: var(--color-1);
-    font-weight: 500; */
-    padding-bottom: 1px;
+    /* padding-bottom: 1px; */
+    padding-left: 20px;
 }
 
 #header-content {
@@ -55,6 +50,10 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.dropdown-content a{
+    text-align: left;
 }
 
 /* Show dropdown when the parent is active */
@@ -119,7 +118,7 @@ header {
     }
 
     .bar {
-        width: 30px;
+        width: 50px;
         height: 1px;
         background: hsl(174.54545455, 8.02919708%, 26.8627451%);
         margin: 6px 0;

@@ -24,3 +24,23 @@
 .resource-button a:hover {
     background-color: #cacbbd;
 }
+
+.page-break {
+    text-align: center;
+    padding: 20px;
+    background: url('../../../public/assets/Website_background.png')
+}
+
+.page-break form {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.page-break p:nth-child(4){
+    font-size: 1rem;
+}
+
+.page-break a {
+    padding: 8px;
+}

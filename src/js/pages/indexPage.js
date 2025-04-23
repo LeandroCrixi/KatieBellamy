@@ -1,5 +1,12 @@
 import { fetchResourcesTopic } from "../modules/api.js"
 import { createElement } from "../modules/utils.js"
+import { pageBreak } from "../modules/dom.js"
+
+const myPageBreak = ()=>{
+    const homePageBreak = document.querySelector('.home-page-break')
+    const myPage = pageBreak()
+    homePageBreak.appendChild(myPage)
+}
 
 const addCircles = async () => {
     const myData = await fetchResourcesTopic()
@@ -33,4 +40,4 @@ const addCircles = async () => {
     }
 }
 
-export { addCircles }
+export { addCircles, myPageBreak }
