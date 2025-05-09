@@ -17,7 +17,7 @@ const footer = async () => {
     div.appendChild(h3)
 
     const socialMedia = createElement('div', {class: 'social-media'})
-    const email = createElement('a', {href: 'mailto:katie@katie-bellamy.com', target: '_blank'})
+    const email = createElement('a', {href: 'mailto:contact@katie-bellamy.com', target: '_blank'})
     const emailIcon = createElement('img', {src: '/public/icons/email_icon.png', alt: 'Email Icon'})
     email.appendChild(emailIcon)
     const facebook = createElement('a', {href: 'https://www.facebook.com/katiebellamytherapy', target: '_blank'})
