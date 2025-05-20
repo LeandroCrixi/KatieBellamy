@@ -1,4 +1,5 @@
-import { createClient } from 'https://cdn.skypack.dev/@supabase/supabase-js'
+// import { createClient } from 'https://cdn.skypack.dev/@supabase/supabase-js'
+import { createClient } from 'https://esm.sh/@supabase/supabase-js'
 import {formatingPathName } from './utils.js'
 import { formattedTitle } from './dom.js'
 

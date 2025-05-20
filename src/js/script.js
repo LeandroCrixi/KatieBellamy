@@ -2,6 +2,7 @@ import { header } from './components/header.js'
 import { myPageBreak } from './pages/indexPage.js'
 import { footer } from './components/footer.js'
 import { handleSubmit } from './modules/events.js'
+import { checkHeight } from './modules/dom.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -40,4 +41,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     // footer section
     footer()
     handleSubmit()
+    checkHeight()
 })

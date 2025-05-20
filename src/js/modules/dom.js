@@ -49,8 +49,8 @@ const formattedTitle = () => {
 
 const pageBreak = () => {
     const pageBreak = createElement('div', { class: 'page-break abhaya' });
-    const pbH2 = createElement('h2', {class: 'text-color-2'}, 'Stay in touch!')
-    const phP = createElement('p', {class: 'text-color-4'}, 'Join our newsletter to receive news and updates.')
+    const pbH2 = createElement('h2', { class: 'text-color-2' }, 'Stay in touch!')
+    const phP = createElement('p', { class: 'text-color-4' }, 'Join our newsletter to receive news and updates.')
     pageBreak.appendChild(pbH2)
     pageBreak.appendChild(phP)
 
@@ -67,7 +67,7 @@ const pageBreak = () => {
         "I'M IN!");
     form.appendChild(submit);
 
-    const shareP = createElement('p', {class: 'text-color-4'}, 'I’ll never share your information.')
+    const shareP = createElement('p', { class: 'text-color-4' }, 'I’ll never share your information.')
     // Append the form to your desired container
     pageBreak.appendChild(form);
     pageBreak.appendChild(shareP)
@@ -75,4 +75,19 @@ const pageBreak = () => {
     return pageBreak
 }
 
-export { currentYear, favicon, mainTitle, formattedTitle, settingBackground, pageBreak }
+// Watch for iframe content height change (works only if the same-origin policy allows — not guaranteed with Google Forms)
+const iframe = document.querySelector('#submit .submit');
+const checkHeight = () => {
+    try {
+        const iframeBody = iframe.contentWindow.document.body;
+        iframe.style.height = iframeBody.scrollHeight + 'px';
+    } catch (err) {
+        // Google Forms likely blocks cross-origin access
+        console.warn('Unable to access iframe content due to cross-origin policy.');
+    }
+    iframe.addEventListener('load', checkHeight);
+}
+
+
+
+export { currentYear, favicon, mainTitle, formattedTitle, settingBackground, pageBreak, checkHeight }
