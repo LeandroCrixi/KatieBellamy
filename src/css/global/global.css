@@ -22,7 +22,7 @@ button {
 }
 
 .web-bg-img {
-    background: url('../../../public/assets/Website_background.png');
+    background: url('../../../public/assets/Website_background.webp');
 }
 .web-bg {
     background-color: var(--color-3);

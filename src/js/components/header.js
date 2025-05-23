@@ -23,7 +23,7 @@ const header = async () => {
         });
         if (!backgroundSet) {
             // header.style.background = "url('../../../public/assets/Homepage_Banner.png') no-repeat center center / cover";
-            header.style.background = "#F8F4EC url('../../../public/assets/Homepage_Image.png') 87% center/360px no-repeat";
+            header.style.background = "#F8F4EC url('../../../public/assets/Homepage_Image.webp') 87% center/360px no-repeat";
             settingBackground(header)
         }
         const headerContent = document.getElementById('header-content')
