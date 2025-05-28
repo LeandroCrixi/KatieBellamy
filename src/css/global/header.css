@@ -54,9 +54,10 @@
         flex-direction: column;
         gap: 8px;
         background: #f8f4ec;
-        padding: 8px 0 8px 18px;
+        padding: 18px 0 8px 28px; /* top padding for separation, more left padding for clarity */
         border-radius: 6px;
         box-shadow: none;
+        border-left: 4px solid #e0dbd2; /* subtle left border for visual clarity */
     }
 }
 
