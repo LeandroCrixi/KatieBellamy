@@ -1,4 +1,148 @@
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 180px;
+    background: var(--color-0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 15px 10px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.dropdown-submenu.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content li {
+    position: relative;
+}
+
+.dropdown-submenu a {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    color: var(--color-4);
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+@media screen and (max-width: 820px) {
+    .dropdown-submenu {
+        position: static;
+        left: 0;
+        top: 0;
+        min-width: unset;
+        box-shadow: none;
+        background: #f8f4ec;
+        padding: 0 0 0 18px;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        transition: none;
+    }
+
+    .dropdown-submenu.show {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: #f8f4ec;
+        padding: 8px 0 8px 18px;
+        border-radius: 6px;
+        box-shadow: none;
+    }
+}
+
+.nav-overlay {
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 820px) {
+    .navBar {
+        z-index: 1202;
+    }
+}
+
 /* Header */
+/* Modern Burger Menu & Mobile Nav Overlay */
+.burger {
+    display: none;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    z-index: 1201;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: transform 0.3s cubic-bezier(.4, 2, .6, 1);
+}
+
+.burger:focus {
+    outline: 2px solid var(--color-4);
+}
+
+.bar {
+    display: block;
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    background: var(--color-4);
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(.4, 2, .6, 1);
+}
+
+.bar1 {
+    top: 12px;
+}
+
+.bar2 {
+    top: 22px;
+}
+
+.bar3 {
+    top: 32px;
+}
+
+.burger.change .bar1 {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.burger.change .bar2 {
+    opacity: 0;
+}
+
+.burger.change .bar3 {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+/* Overlay for mobile nav */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1200;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
 header {
     padding-bottom: 1px;
     padding-left: 20px;
@@ -145,6 +289,34 @@ header {
     #title {
         margin: 0px;
         justify-content: center;
+    }
+
+    /* Make dropdown-content appear below Topics in mobile */
+    .dropdown-content {
+        position: static;
+        left: 0;
+        top: 0;
+        min-width: 100vw;
+        width: 100vw;
+        background: white;
+        box-shadow: none;
+        padding: 0 0 0 0;
+        z-index: 2;
+        border-radius: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .dropdown-content.show {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    .dropdown-content a {
+        font-size: 2rem;
+        padding: 24px 0;
+        border-bottom: 1px solid #eee;
     }
 }
 

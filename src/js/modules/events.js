@@ -1,10 +1,6 @@
-const toggleMenu = () => {
-    const menu = document.querySelector(".navBar");
-    menu.classList.toggle("active");
 
-    const burger = document.querySelector('.burger')
-    burger.classList.toggle('change')
-}
+// Deprecated: toggleMenu is no longer used, logic is now in header.js for modern nav
+const toggleMenu = () => { } // no-op
 
 
 const addShowClass = () => {
