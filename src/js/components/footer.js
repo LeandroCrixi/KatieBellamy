@@ -82,7 +82,7 @@ const footer = async () => {
     footer.appendChild(p)
 
     const leoCrixi = createElement('p', {id: 'dev'})
-    const devLink = createElement('a', {href: 'https://leandro-crixi.netlify.app/'}, 'Leo Crixi')
+    const devLink = createElement('a', {href: 'https://leandro-crixi.netlify.app/', target: "_blank"}, 'Leo Crixi')
     leoCrixi.innerHTML = '<br> Website designed and managed by '
     leoCrixi.appendChild(devLink)
     footer.appendChild(leoCrixi)
