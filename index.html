@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYE986XE71"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YYE986XE71');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Katie Bellamy LLC</title>
@@ -29,7 +39,8 @@
                     body liberation, disability justice, queer inclusion, intersectionality, and collective care.</p>
                 <p>We created this space not just to support our clients, but to contribute to broader conversations
                     about wellness, equity, and healing.</p>
-                <p>Special thanks to <span><a class="text-color-4" href="https://www.katie-bellamy.com/about-ashantis">Ashantis Jones</a></span>, 
+                <p>Special thanks to <span><a class="text-color-4"
+                            href="https://www.katie-bellamy.com/about-ashantis">Ashantis Jones</a></span>,
                     whose vision, time, and expertise helped bring this project to
                     life. Their contributions were foundational in shaping this as a space that honors both lived
                     experience and professional insight.</p>
@@ -49,6 +60,28 @@
     <footer></footer>
 
     <script type="module" src="./src/js/script.js" defer></script>
+
+    <!-- Cookie Consent Banner (Insites) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            window.cookieconsent.initialise({
+                palette: {
+                    popup: { background: "#3f4a49" },
+                    button: { background: "#ac785d" }
+                },
+                theme: "classic",
+                content: {
+                    message: "This site uses cookies to improve your experience.",
+                    dismiss: "OK",
+                    // link: "Privacy Policy",
+                    // href: "/privacy-policy"
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
